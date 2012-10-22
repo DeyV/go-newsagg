@@ -3,37 +3,13 @@ package main
 import (
 	"./rss"
 	//	"code.google.com/p/goconf/conf"
-	"encoding/xml"
+	 
 	"net/http"
 )
 
-type RssConfig struct {
-	Title,
-	HrefRel,
-	HrefSelf,
-	Author,
-	AuthorXML,
-	Updated string
-}
-
-func newAtom(entry []*rss.Entry, conf RssConfig) *rss.Feed {
-
-	var atomFeed = &rss.Feed{
-		XMLName: xml.Name{"http://www.w3.org/2005/Atom", "feed"},
-		Title:   conf.Title,
-		Link: []rss.Link{
-			{Rel: "alternate", Href: conf.HrefRel},
-			{Rel: "self", Href: conf.HrefSelf},
-		},
-		Id:      conf.HrefRel,
-		Updated: rss.ParseTime(conf.Updated),
-		Author: rss.Person{
-			Name:     conf.Author,
-			InnerXML: conf.AuthorXML,
-		},
-		Entry: entry,
-	}
-	return atomFeed
+func init() {
+	HandleFunc("/rss", actionRssAtom)
+	HandleFunc("/rss/atom", actionRssAtom)
 }
 
 func actionRssAtom(w http.ResponseWriter, req *http.Request) {

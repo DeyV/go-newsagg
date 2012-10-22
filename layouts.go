@@ -19,11 +19,11 @@ func (h *HtmlContainer) getHtml() template.HTML {
 
 type HtmlAssigner map[string]interface{}
 
-var templLayouts *template.Template = template.Must(
-	template.ParseGlob("templates/layouts/*.html"))
-
 func getLayoutTemplates() *template.Template {
+	var templLayouts *template.Template = template.Must(
+		template.ParseGlob("templates/layouts/*.html"))
+
 	temp, _ := templLayouts.Clone()
 
-	return temp
+	return temp 
 }

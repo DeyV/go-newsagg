@@ -4,41 +4,23 @@ import (
 	"html/template"
 	// "io"
 	// "code.google.com/p/goconf/conf"
-	"./rss"
+	"./category"
 	"fmt"
 	"net/http"
 )
 
-var List []*rss.Entry = []*rss.Entry{
-	{Title: "1 tytuł", Id: "1", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
-	{Title: "1 tytuł", Id: "2", Summary: rss.Text{Body: "2321321"}},
+func init() {
+	HandleFunc("/", actionHome)
+	HandleFunc("/test", actionTest)
+	HandleFunc("/k", actionCategories)
+	HandleFunc("/k/latest", actionCategories)
 }
-
-func getEntryList(cat string, limit int) []*rss.Entry {
-	return List
-}
-
-// func Len(v []interface{}) int {
-// 	return len(v)
-// }
-
-var templActionHome *template.Template = template.Must(
-	template.ParseGlob("templates/home/*.html"))
 
 func actionHome(w http.ResponseWriter, req *http.Request) {
+
+	var templActionHome *template.Template = template.Must(
+		template.ParseGlob("templates/home/*.html"))
+
 	lay := getLayoutTemplates()
 	wr := &HtmlContainer{}
 
@@ -48,11 +30,44 @@ func actionHome(w http.ResponseWriter, req *http.Request) {
 		"Test": "Test",
 	}
 
-	templActionHome.Execute(wr, data)
+	err := templActionHome.Execute(wr, data)
+	if err != nil {
+		fmt.Errorf("%v", err)
+	}
 
-	lay.New("title").Parse("Najnowsze wpisy ze świata PHP")
+	lay.New("title").Parse(config.GetStringDef("page", "title", "Page Title"))
 
-	lay.Execute(w, wr.getHtml())
+	err = lay.Execute(w, wr.getHtml())
+	if err != nil {
+		fmt.Errorf("%v", err)
+	}
+}
+
+func actionCategories(w http.ResponseWriter, req *http.Request) {
+
+	var templActionCategories *template.Template = template.Must(
+		template.ParseGlob("templates/categories/*.html"))
+
+	wr := &HtmlContainer{}
+
+	// templActionHome.Funcs(template.FuncMap{"len": Len})
+	data := HtmlAssigner{
+		"List": category.GetTagCloud(),
+		"Test": "Test",
+	}
+
+	err := templActionCategories.Execute(wr, data)
+	if err != nil {
+		fmt.Errorf("%v", err)
+	}
+
+	lay := getLayoutTemplates()
+	lay.New("title").Parse(config.GetStringDef("page", "title", "Page Categories"))
+
+	err = lay.Execute(w, wr.getHtml())
+	if err != nil {
+		fmt.Errorf("%v", err)
+	}
 }
 
 func actionTest(w http.ResponseWriter, req *http.Request) {

@@ -11,8 +11,7 @@ import (
 	"./conf"
 	"net/http"
 	// "runtime"
-
-	// "time"
+	"time"
 )
 
 // 
@@ -20,15 +19,22 @@ var dbmap *gorp.DbMap
 var db *sql.DB
 
 var config *conf.ConfigFile
+var debugShowTime bool
 
 func init() {
-	config, _ = conf.ReadConfigFile("config/project.ini")
+	var err error
+	config, err = conf.ReadConfigFile("config/project.ini")
+	if err != nil {
+		panic("Cant read config file: config/project.ini")
+	}
+
+	debugShowTime = config.GetBoolDef("debug", "showTime", true)
 
 	// runtime.GOMAXPROCS(4) 
 
 	// connect to db using standard Go database/sql API
 	// use whatever database/sql driver you wish
-	db, err := sql.Open("sqlite3", "./data/Planeta.sqlite")
+	db, err := sql.Open(config.GetStringDef("db", "type", "sqlite3"), config.GetStringDef("db", "dns", "data/newsagg.db"))
 	if err != nil {
 		panic(err)
 	}
@@ -39,17 +45,12 @@ func init() {
 func main() {
 	defer db.Close()
 
+	RegModelsSchema(dbmap)
+
 	runServer()
 }
 
 func runServer() {
-	// http.HandleFunc("/form", actionForm)
-	// http.HandleFunc("/tags", actionTags)
-	HandleFunc("/", actionHome)
-	HandleFunc("/test", actionTest)
-	HandleFunc("/rss", actionRssAtom)
-	HandleFunc("/rss/atom", actionRssAtom)
-
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	siteUrl, _ := config.GetString("default", "siteUrl")
@@ -66,11 +67,16 @@ func runServer() {
 // The documentation for ServeMux explains how patterns are matched.
 func HandleFunc(pattern string, handler func(http.ResponseWriter, *http.Request)) {
 	http.HandleFunc(pattern, func(w http.ResponseWriter, req *http.Request) {
-		// t1 := time.Now()
+		var t1 time.Time
+		if debugShowTime {
+			t1 = time.Now()
+		}
 
 		handler(w, req)
 
-		// t := time.Now().Sub(t1)
-		// fmt.Printf("Action %s, time: %s\n", pattern, t)
+		if debugShowTime {
+			t := time.Now().Sub(t1)
+			fmt.Printf("Action %s, time: %s\n", pattern, t)
+		}
 	})
 }

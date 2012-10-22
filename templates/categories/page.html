@@ -2,7 +2,7 @@
 <div class="page">
 	<div class="page-header">
 	    <div class="page-header-content">
-	   		<h2> Wpisy  {{len .List}} </h2>
+	   		<h2> Lista kategorii ({{len .List}})</h2>
 	    </div>
 	</div>
 
@@ -14,8 +14,7 @@
  
 	<h3 id="p{{.Id}}">{{.Title}}</h3>
 	<div class="page snapped" style="background-color: #ccc; height: 200px">  
-    	({{.Updated}})    
-    
+    	({{.Updated}})    	
   	</div>	
 	<div class="page fill bg-color-blue" style="height: 200px">
 		{{.Summary}} 

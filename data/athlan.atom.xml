@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2006/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en-US"
+  xml:base="http://athlan.pl/wp-atom.php">
+	<title type="text">Athlan • Piotr Pelczar • blog programisty</title>
+	<subtitle type="text">Napisać kod zrozumiały dla komputera potrafi byle głupek. Dobrzy programiści tworzą kod zrozumiały...</subtitle>
+	<updated>2012-09-10T10:27:39Z</updated>
+	<link rel="alternate" type="text/html" href="http://athlan.pl" />
+	<id>http://athlan.pl/feed/atom/</id>
+	<link rel="self" type="application/atom+xml" href="http://athlan.pl/feed/atom/" />
+	<generator uri="http://wordpress.org/" version="3.4.2">WordPress</generator>
+	<entry>
+		<author>
+			<name>Athlan</name>
+			<uri>http://www.vgroup.pl</uri>
+		</author>
+		<title type="html"><![CDATA[Double-checked locking with Singleton pattern in Java]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/double-checked-locking-singleton-java/" />
+		<id>http://athlan.pl/?p=839</id>
+		<updated>2012-09-10T10:27:39Z</updated>
+		<published>2012-09-10T09:46:24Z</published>
+		<category scheme="http://athlan.pl" term="Java" />
+		<category scheme="http://athlan.pl" term="Publikacje" />
+		<category scheme="http://athlan.pl" term="Security" />
+		<category scheme="http://athlan.pl" term="Solutions" />
+		<category scheme="http://athlan.pl" term="design pattern" />
+		<category scheme="http://athlan.pl" term="java" />
+		<category scheme="http://athlan.pl" term="Parallel" />
+		<category scheme="http://athlan.pl" term="Parallel Computing" />
+		<category scheme="http://athlan.pl" term="singleton" />		
+		<summary type="html"><![CDATA[I just faced problem with synchronization many threads starting at the same time (with microseconds difference) and creating single object instance of connection to the database using a Singleton Pattern in Java. As a result I had many connections except one. The sent queries counter has been set to smaller value as excepted in simulations. [...]]]>
+		</summary>
+		<content type="html" xml:base="http://athlan.pl/double-checked-locking-singleton-java/"><![CDATA[<p>I just faced problem with synchronization many threads starting at the same time (with microseconds difference) and creating single object instance of connection to the database using a <strong>Singleton Pattern in Java</strong>. As a result I had many connections except one. The sent queries counter has been set to smaller value as excepted in simulations.</p> ]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/double-checked-locking-singleton-java/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/double-locking-singleton-java/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+	<entry>
+		<author>
+			<name>Athlan</name>
+			<uri>http://www.vgroup.pl</uri>
+		</author>
+		<title type="html"><![CDATA[How to trim QUERY_STRING from mod_rewrite redirect]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/trim-query-string-from-modrewrite-redirect/" />
+		<id>http://athlan.pl/?p=838</id>
+		<updated>2012-09-09T10:04:39Z</updated>
+		<published>2012-09-09T10:04:39Z</published>
+		<summary type="html"><![CDATA[Quick issue = quick solution. How to trim out a QUERY_STRING from mod_rewrite redirect? RewriteEngine On RewriteCond %{QUERY_STRING} z=([0-9]*)&#38;x=([0-9]*)&#38;y=([0-9]*)&#38;r=mapnik RewriteRule tiles.php http://a.tile.openstreetmap.org/%1/%2/%3.png [NC,L,R=301] After accessing file: tiles.php?z=6&#38;x=35&#38;y=21&#38;r=mapink you will be redirected to http://a.tile.openstreetmap.org/6/35/21.png?z=6&#38;x=35&#38;y=21&#38;r=mapink The query string params are appended by default. To trim out the parameters, just place an ending ? (question mark) to redirect [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/trim-query-string-from-modrewrite-redirect/"><![CDATA[<p>Quick issue = quick solution.</p>
+<h2>How to trim out a QUERY_STRING from mod_rewrite redirect?</h2>
+<pre>RewriteEngine On
+RewriteCond %{QUERY_STRING} z=([0-9]*)&amp;x=([0-9]*)&amp;y=([0-9]*)&amp;r=mapnik
+RewriteRule tiles.php http://a.tile.openstreetmap.org/%1/%2/%3.png [NC,L,R=301]</pre>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/trim-query-string-from-modrewrite-redirect/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/trim-query-string-from-modrewrite-redirect/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+	<entry>
+		<author>
+			<name>Athlan</name>
+			<uri>http://www.vgroup.pl</uri>
+		</author>
+		<title type="html"><![CDATA[How to disable trash wordpress feature plugin]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/how-to-disable-trash-wordpress-feature-plugin/" />
+		<id>http://athlan.pl/?p=819</id>
+		<updated>2012-07-22T20:44:49Z</updated>
+		<published>2012-07-22T12:39:13Z</published>
+		<category scheme="http://athlan.pl" term="java" /><category scheme="http://athlan.pl" term="Optymalizacja" /><category scheme="http://athlan.pl" term="PHP" /><category scheme="http://athlan.pl" term="php.pl" /><category scheme="http://athlan.pl" term="Solutions" /><category scheme="http://athlan.pl" term="Uncategorized" /><category scheme="http://athlan.pl" term="Wordpress" /><category scheme="http://athlan.pl" term="The Wordrpess Optimalizations" />		<summary type="html"><![CDATA[Howdy! Recently, I have been working a lot with WordPress engine, modyfying behind the site by writing plugins. I wonder to share my knowledge I collected under The Wordrpess Optimalizations tag, where a lot of simple tricks will be published. I also know that in the web there are a few of advises related with [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/how-to-disable-trash-wordpress-feature-plugin/"><![CDATA[<p>Howdy! Recently, I have been working a lot with <strong>WordPress</strong> engine, modyfying behind the site by writing plugins. I wonder to share my knowledge I collected under <a href="/tag/the-wordrpess-optimalizations/">The Wordrpess Optimalizations</a> tag, where a lot of simple tricks will be published. I also know that in the web there are a few of advises related with turning WordPress optimized and combination with your&#8217;s flair, the WordPress can become a powerfull, huge toll able to build simply sites as well as advanced solutions. The main advantage of WordPress is well developed backend, so you don&#8217;t have to care about beautiful and simply way to publish content and concentrate in frontent, striving to make a website much friendly to end user.</p>
+<p>Unfortunately, the WordPress has many features that in common are not required in your project. Obviously, it generates relatively huge overhead to server, database and so one.</p>
+<p>This post describes <strong>how to disable the &#8220;Trash&#8221; feature</strong>, which has been introduced in version 2.9 aimed to keep posts until permament deletion, such as deleting files in operating system. Deleted items are not deleted permanently from the database in fact, instead they appears in &#8220;Trash&#8221; by marking them as deleted, setting the flag.</p>
+<h2>Disabling trash manually</h2>
+<p>To disable trash in wordpress, you can simply define the constant <code>EMPTY_TRASH_DAYS</code>, for example in your <code>wp-config.php</code>.</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #990000;">define</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'EMPTY_TRASH_DAYS'</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">0</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr></table></div>
+
+<p>From now, all options &#8220;Move to trash&#8221; will no longer apperar in admin pages, the functionality is <em>just</em> disabled. Just&#8230; but copies of posts marked as deleted are still in the database. To truncate them, just execute the sql statement:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">DELETE</span> p<span style="color: #66cc66;">,</span> p_rel<span style="color: #66cc66;">,</span> p_meta
+ <span style="color: #993333; font-weight: bold;">FROM</span> wp_posts p
+ <span style="color: #993333; font-weight: bold;">LEFT</span> <span style="color: #993333; font-weight: bold;">JOIN</span> wp_term_relationships p_rel <span style="color: #993333; font-weight: bold;">ON</span> <span style="color: #66cc66;">&#40;</span>p<span style="color: #66cc66;">.</span>ID <span style="color: #66cc66;">=</span> p_rel<span style="color: #66cc66;">.</span>object_id<span style="color: #66cc66;">&#41;</span>
+ <span style="color: #993333; font-weight: bold;">LEFT</span> <span style="color: #993333; font-weight: bold;">JOIN</span> wp_postmeta p_meta <span style="color: #993333; font-weight: bold;">ON</span> <span style="color: #66cc66;">&#40;</span>p<span style="color: #66cc66;">.</span>ID <span style="color: #66cc66;">=</span> p_meta<span style="color: #66cc66;">.</span>post_id<span style="color: #66cc66;">&#41;</span>
+ <span style="color: #993333; font-weight: bold;">WHERE</span> p<span style="color: #66cc66;">.</span>post_status <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">'trash'</span></pre></td></tr></table></div>
+
+<p>All posts marked as &#8220;Move to trash&#8221; will be deleted, and theirs post meta (custom fields) and taxonomy relations will be truncated too. The database now is clean.</p>
+<h2>Writing simple plugin.</h2>
+<p>We will write a simple plugin. In the <code>/wp-content/plugins/MyPlugin/</code> create a file <code>plugin.php</code>, and the code within:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #990000;">define</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'EMPTY_TRASH_DAYS'</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">0</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+register_activation_hook<span style="color: #009900;">&#40;</span><span style="color: #009900; font-weight: bold;">__FILE__</span><span style="color: #339933;">,</span> <span style="color: #000000; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+ <span style="color: #000000; font-weight: bold;">global</span> <span style="color: #000088;">$wpdb</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #000088;">$query</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">&quot;DELETE p, p_rel, p_meta
+ FROM &quot;</span> <span style="color: #339933;">.</span> <span style="color: #000088;">$wpdb</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">posts</span> <span style="color: #339933;">.</span> <span style="color: #0000ff;">&quot; p
+ LEFT JOIN &quot;</span> <span style="color: #339933;">.</span> <span style="color: #000088;">$wpdb</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">term_relationships</span> <span style="color: #339933;">.</span> <span style="color: #0000ff;">&quot; p_rel ON (p.ID = p_rel.object_id)
+ LEFT JOIN &quot;</span> <span style="color: #339933;">.</span> <span style="color: #000088;">$wpdb</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">postmeta</span> <span style="color: #339933;">.</span> <span style="color: #0000ff;">&quot; p_meta ON (p.ID = p_meta.post_id)
+ WHERE p.post_status = 'trash'&quot;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #000088;">$wpdb</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">query</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$query</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr></table></div>
+
+<p>The Trash feature is disabled by setting the <code>EMPTY_TRASH_DAYS</code> constant, and posts moved to trash will be deleted while plugin activation. We used register_activation_hook function with <a href="http://php.net/manual/en/functions.anonymous.php">anonymous function</a> javascript-like callback function (PHP 5.3).</p>
+<h2>Download the plugin</h2>
+<p>The plugin compiled to be ready to install is available here:</p>
+<ul>
+<li><a href="/wp-content/uploads/Opt_Disable_Revisions.zip" target="_blank">Opt Disable Revisions plugin</a>, 1kb</li>
+</ul>
+<p>Hope the post will be helpfull.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/how-to-disable-trash-wordpress-feature-plugin/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/how-to-disable-trash-wordpress-feature-plugin/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[Parallel Matrix Multiplication in ADA95]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/parallel-matrix-multiplication-ada95/" />
+		<id>http://athlan.pl/?p=804</id>
+		<updated>2012-06-16T10:57:19Z</updated>
+		<published>2012-06-16T10:43:27Z</published>
+		<category scheme="http://athlan.pl" term="Matematyka" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Private" /><category scheme="http://athlan.pl" term="Projects" /><category scheme="http://athlan.pl" term="Publikacje" /><category scheme="http://athlan.pl" term="ADA95" /><category scheme="http://athlan.pl" term="Elaboration" /><category scheme="http://athlan.pl" term="GNAT" /><category scheme="http://athlan.pl" term="Math" /><category scheme="http://athlan.pl" term="Matrix" /><category scheme="http://athlan.pl" term="Multiplication" /><category scheme="http://athlan.pl" term="Parallel" /><category scheme="http://athlan.pl" term="Parallel Computing" />		<summary type="html"><![CDATA[I want to share my elaboration about Parallel Matrix Multiplication I have writed (as extra task) by the way Parallel Computations which is one of my subject in Silesian University of Technology in the Computer Science course I attend. The elaboration have been written of course in Polish. I have sloved this problem very simply in [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/parallel-matrix-multiplication-ada95/"><![CDATA[<p>I want to share my elaboration about <strong>Parallel Matrix Multiplication</strong> I have writed (as extra task) by the way <strong>Parallel Computations</strong> which is one of my subject in Silesian University of Technology in the Computer Science course I attend. The elaboration have been written of course in Polish.</p>
+<p>I have sloved this problem very simply in <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)">ADA95 programming language</a>, which gives an opportunity to write parallel programs very easly in Pascal-like syntax.</p>
+<p>My solution of this problem divides an elementary operations between 1 to <em>N</em> provided processors, distributed with shared memory <a href="http://en.wikipedia.org/wiki/Parallel_Random_Access_Machine#Read.2Fwrite_conflicts">CRCW PRAM model</a> (Parallel Concurrent Read and Concurrent Write). In particular, you can fire up computing in only one processor. Elaborate discuss about problems with value of memory cells working as an accumulator in adding (+) process. It&#8217;s overall only.</p>
+<ul>
+<li><a href="http://athlan.pl/wp-content/uploads/Problem-mnożenia-macierzy.pdf">Algorytm skalowalnego zrównoleglonego mnożenia macierzy</a> (PDF, ~0.75 MB)</li>
+<li><a href="MatrixParallelMultiplication.adb">MatrixParallelMultiplication.adb</a> (ADA95 implementation)</li>
+</ul>
+<p>Finally, I have compiled the code under GNAT 2011 compiler in GPS 2011 IDE (GNAT Developer Studio). For people interested in ADA95 programming and Parallel Computations I recommend some polish books avaiable for example in Silesian Libraries:</p>
+<ul>
+<li>Porębski, W. (2003). <em>ADA95 Wprowadzenie do Programowania.</em> Michałowice: Komputerowa Oficyna Wydawnicza &#8220;HELP&#8221;, Piotr Gomoliński.</li>
+<li>Czech, Z. (2010). <em>Wprowadzenie do obliczeń równoległych</em>. Warszawa: Wydawnictwo Naukowe PWN.</li>
+<li>Ben-Ari, M. (2009). <em>Podstawy Programowania współbieżnego i rozproszonego</em> (strony 99-133). Warszawa: WNT.</li>
+</ul>
+<p>Xin Wang reveals another ways to slove this problem in <a href="http://www.google.pl/search?q=Xin+Wang+Scalable+Parallel+Matrix+Multiplication+Algorithms+withApplication+to+a+Maximum+Entropy+Problem"><em>Scalable Parallel Matrix Multiplication Algorithms with<br />
+Application to a Maximum Entropy Problem</em></a> publication, but it is only math theory, without implementation.</p>
+<p>You can easly write parallel prorgams using MPI library for C++ or Parallel library Java. In general, there are many ways to implement algorythms, but the most important in Parallel Computations is not implementations, but problem decomposition and hardware structure of computing processors which exchanges information with each other.</p>
+<p>Have fun!</p>
+<p>&nbsp;</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/parallel-matrix-multiplication-ada95/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/parallel-matrix-multiplication-ada95/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[How to send template and layout mail with Zend_Mail]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/send-template-layout-mail-with-zend_mail/" />
+		<id>http://athlan.pl/?p=779</id>
+		<updated>2012-02-14T14:33:48Z</updated>
+		<published>2012-02-14T14:33:21Z</published>
+		<category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Solutions" /><category scheme="http://athlan.pl" term="Zend framework" /><category scheme="http://athlan.pl" term="Zend_Layout" /><category scheme="http://athlan.pl" term="Zend_View" /><category scheme="http://athlan.pl" term="Zned_Mail" />		<summary type="html"><![CDATA[Zend_Mail provides a great and simple in use and configuration mechanizm to send emails. The problem begins when you would like to specify fully templated and layouted messages. In my current project I have several kinds of mails: customer invoices and messages, users notifications, admin notifications, webmaster email about critical errors in scheduled system tasks. [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/send-template-layout-mail-with-zend_mail/"><![CDATA[<p><em><strong>Zend_Mail</strong></em> provides a great and simple in use and configuration mechanizm to send emails. The problem begins when you would like to specify fully templated and layouted messages.</p>
+<p>In my current project I have several kinds of mails: customer invoices and messages, users notifications, admin notifications, webmaster email about critical errors in scheduled system tasks. In this case the <em><strong>Zend_Layout</strong></em> fits perfectly to redner rich text content by <em><strong>Zend_View</strong></em>, but it is implemented in <em>Zend_Mail</em>, wchih provies simply <em>setBodyText()</em> and <em>setBodyHTML()</em> methods.</p>
+<p>This inconvenience is understandable by the way, mainly in context simpe, clear and flexible extendable code of Zend Framework. We will strive to extend the functionality od Zend_Mail following ZF developers concepts.</p>
+<h2>Overview</h2>
+<p>Writing class extending Zend_Mail I kept a several concepts:</p>
+<ul>
+<li>Messages should be both templated and layouted using <em>Zend_View</em> and <em>Zend_Layout</em>.</li>
+<li>The email view scripts (templates) there are in main view scripts directory nested in subdirectory (as deep as you want).</li>
+<li>&#8230; The same path story with layouts.</li>
+<li>You can use this object excatly the same way as <em>Zend_Mail</em>. It behaviour the same way as parent until you set special options (like point to view script path or file to render in body).</li>
+<li>&#8230; and object should keep <em>Zend_Mail</em> fluent interface (returning <em>$this</em> in setters) to provide <a href="http://en.wikipedia.org/wiki/Fluent_interface#PHP">method chaining fluent interface</a>.</li>
+<li>Pointed view file is rendered as a mail body.</li>
+<li><span style="text-decoration: underline;">You can use this object excatly the same way as <em>Zend_Mail</em></span>. It behaviour the same way as parent until you set special options (like point to view script path or file to render in body).</li>
+</ul>
+<h2>Zend_Mail application.ini configuration and extending application</h2>
+<p>Simply paste several lines to <code>application.ini</code> configuration, theare are self-commented, description is not neccessary at this point. We will use <a href="http://framework.zend.com/manual/en/zend.mail.smtp-authentication.html">SMTP transport</a>:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="ini" style="font-family:monospace;">resources.mail.transport.type <span style="color: #000066; font-weight:bold;">=</span><span style="color: #660066;"> smtp</span>
+resources.mail.transport.host <span style="color: #000066; font-weight:bold;">=</span><span style="color: #660066;"> YOUR_HOSTNAME</span>
+resources.mail.transport.auth <span style="color: #000066; font-weight:bold;">=</span><span style="color: #660066;"> login</span>
+resources.mail.transport.username <span style="color: #000066; font-weight:bold;">=</span> <span style="color: #933;">&quot;YOUR_ACCOUNT&quot;</span>
+resources.mail.transport.password <span style="color: #000066; font-weight:bold;">=</span> <span style="color: #933;">&quot;YOUR_PASSWORD&quot;</span>
+resources.mail.transport.register <span style="color: #000066; font-weight:bold;">=</span><span style="color: #660066;"> true</span>
+&nbsp;
+resources.mail.defaultFrom.email <span style="color: #000066; font-weight:bold;">=</span><span style="color: #660066;"> YOUR_ACCOUNT</span>
+resources.mail.defaultFrom.name <span style="color: #000066; font-weight:bold;">=</span> <span style="color: #933;">&quot;MyService.com&quot;</span>
+resources.mail.defaultReplyTo.email <span style="color: #000066; font-weight:bold;">=</span><span style="color: #660066;"> YOUR_ACCOUNT</span>
+resources.mail.defaultReplyTo.name <span style="color: #000066; font-weight:bold;">=</span> <span style="color: #933;">&quot;MyService.com&quot;</span></pre></td></tr></table></div>
+
+<p>In addition we will create tho additional directories and files:</p>
+<ul>
+<li><code>/application/views/scripts/email/</code>-  just add a subdirectory /email to existing view scripts directory.</li>
+<li><code>/application/layouts/scripts/email/</code> &#8211; the same story as above</li>
+</ul>
+<div><strong>TIP:</strong> I have moved default configured layouts direcotry to <code>/application/views/layouts/</code> to unify structure of application. Just change in <code>application.ini</code> this line:</div>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="ini" style="font-family:monospace;">resources.layout.layoutPath <span style="color: #000066; font-weight:bold;">=</span><span style="color: #660066;"> APPLICATION_PATH </span><span style="color: #933;">&quot;/modules/default/views/layouts/scripts/&quot;</span></pre></td></tr></table></div>
+
+<p>To test our class let&#8217;s create additional two files:</p>
+<p><code>/application/layouts/scripts/email/<strong>html.phtml</strong></code></p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #339933;">&lt;</span> ?php <span style="color: #b1b100;">echo</span> <span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">layout</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">content</span> <span style="color: #000000; font-weight: bold;">?&gt;</span>
+<span style="color: #339933;">&lt;</span>p<span style="color: #339933;">&gt;--&lt;</span>br <span style="color: #339933;">/&gt;</span>Best Regards<span style="color: #339933;">,&lt;</span>br <span style="color: #339933;">/&gt;</span>MyService<span style="color: #339933;">.</span>com<span style="color: #339933;">&lt;/</span>p<span style="color: #339933;">&gt;</span></pre></td></tr></table></div>
+
+<p>and scond one, the information about successfull account register with your own content:</p>
+<p><code>/application/views/scripts/email/<strong>AccountRegister.phtml</strong></code></p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="html" style="font-family:monospace;">&lt;p&gt;Thanks for register.&lt;/p&gt;</pre></td></tr></table></div>
+
+<h2>ZentUtil_Mail class usage</h2>
+<p>Before we will write a code, let&#8217;s think abous its usage, wchih should be the same as in <a href="http://framework.zend.com/manual/en/zend.mail.introduction.html">Zend_Mail documentation</a> witch additional methods:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #000088;">$mail</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> ZendUtil_Mail<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'utf-8'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #000088;">$mail</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">addTo</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'athlanster@gmail.com'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'Piotr Pelczar'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #000088;">$mail</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">setSubject</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Testowy mail z zenda'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #000088;">$mail</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">setBodyView</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'AccountRegister.phtml'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #000088;">$mail</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">send</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr></table></div>
+
+<p>Above code should send mail from <code>AccountRegister.phtml</code> view script nested in <code>html.phtml</code> layout.</p>
+<p>If you want to change layout simply call <code>setViewLayoutScript($script)</code> method with string or set <code>false</code> to disable layouts. For change paths <code>setViewPathDirectory($path)</code>, <code>setViewLayoutPathDirectory($path)</code> are available.</p>
+<h2>ZendUtil_Mail extends Zend_Mail</h2>
+<p>ZendUtil_Mail has been extended by Zend_Mail and <code>_prepareBody()</code> method has been added. It is called just before <code>parent::send()</code> method.</p>
+<ul>
+<li><strong><a href="http://athlan.pl/code/Mail">Download the ZendUtil_Mail source code.</a></strong></li>
+</ul>
+<p><strong>NOTE:</strong> I have added <code>ZendUtil_</code> namespace.</p>
+<p>I hope it will help.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/send-template-layout-mail-with-zend_mail/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/send-template-layout-mail-with-zend_mail/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[How to get single error message with Zend_Validate_EmailAddress validation]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/single-error-message-zend_validate_emailaddress/" />
+		<id>http://athlan.pl/?p=763</id>
+		<updated>2012-02-14T00:01:07Z</updated>
+		<published>2012-02-13T23:45:09Z</published>
+		<category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Solutions" /><category scheme="http://athlan.pl" term="Zend framework" /><category scheme="http://athlan.pl" term="Zend_Validate" />		<summary type="html"><![CDATA[I have just started introducing Zend Framework when I had to face the problem with output multiple error messages in form while email address validation. Checking domain (whith is enabled by default) causes additional error messages indicates anomalies in hostname segment of provided by user email address. In result, we receive several errors assigned to [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/single-error-message-zend_validate_emailaddress/"><![CDATA[<p>I have just started introducing Zend Framework when I had to face the problem with output multiple error messages in form while email address validation. Checking domain (whith is enabled by default) causes additional error messages indicates anomalies in hostname segment of provided by user email address. In result, we receive several errors assigned to one email field.</p>
+<p>The problem is easy to slove by overriding default behaviour of Zend_Validate_EmailAddress clearing all messages generating while validation and setup a new single error message.</p>
+<p>Simply add namespace <em>MyOwn_</em> for own needs and provide class in file <code>/libraries/MyOwn/Validate/EmailAddess.php</code></p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">class</span> MyOwn_Validate_EmailAddress <span style="color: #000000; font-weight: bold;">extends</span> Zend_Validate_EmailAddress
+<span style="color: #009900;">&#123;</span>
+  <span style="color: #000000; font-weight: bold;">const</span> INVALID <span style="color: #339933;">=</span> <span style="color: #0000ff;">'emailAddressInvalid'</span><span style="color: #339933;">;</span>
+&nbsp;
+  <span style="color: #000000; font-weight: bold;">protected</span> <span style="color: #000088;">$_messageTemplates</span> <span style="color: #339933;">=</span> <span style="color: #990000;">array</span><span style="color: #009900;">&#40;</span>
+    <span style="color: #000000; font-weight: bold;">self</span><span style="color: #339933;">::</span><span style="color: #004000;">INVALID</span> <span style="color: #339933;">=&gt;</span> <span style="color: #0000ff;">&quot;Invalid Email Address.&quot;</span>
+  <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+  <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> isValid<span style="color: #009900;">&#40;</span><span style="color: #000088;">$value</span><span style="color: #009900;">&#41;</span>
+  <span style="color: #009900;">&#123;</span>
+    parent<span style="color: #339933;">::</span><span style="color: #004000;">setOptions</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">array</span><span style="color: #009900;">&#40;</span>
+      <span style="color: #0000ff;">'allow'</span> <span style="color: #339933;">=&gt;</span> Zend_Validate_Hostname<span style="color: #339933;">::</span><span style="color: #004000;">ALLOW_DNS</span><span style="color: #339933;">,</span>
+      <span style="color: #0000ff;">'domain'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+      <span style="color: #0000ff;">'mx'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+      <span style="color: #0000ff;">'deep'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+    <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #339933;">!</span>parent<span style="color: #339933;">::</span><span style="color: #004000;">isValid</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$value</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+      <span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span>_messages <span style="color: #339933;">=</span> <span style="color: #990000;">array</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// clear all previous messages</span>
+      <span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span>_error<span style="color: #009900;">&#40;</span><span style="color: #000000; font-weight: bold;">self</span><span style="color: #339933;">::</span><span style="color: #004000;">INVALID</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+      <span style="color: #b1b100;">return</span> <span style="color: #009900; font-weight: bold;">false</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+&nbsp;
+    <span style="color: #b1b100;">return</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+  <span style="color: #009900;">&#125;</span>
+<span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+<p>And provide above custom validator to form element in <code>/application/forms/AccountRegister.php</code>:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">class</span> Form_AccountRegister <span style="color: #000000; font-weight: bold;">extends</span> Zend_Form
+<span style="color: #009900;">&#123;</span>
+  <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+  <span style="color: #009900;">&#123;</span>
+    <span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">setMethod</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'post'</span><span style="color: #009900;">&#41;</span>
+         <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setName</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Account_Register'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+    <span style="color: #000088;">$email</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Zend_Form_Element_Text<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'email'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #000088;">$email</span>
+      <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setLabel</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Email address'</span><span style="color: #009900;">&#41;</span>
+      <span style="color: #339933;">-&gt;</span><span style="color: #004000;">addValidator</span><span style="color: #009900;">&#40;</span><span style="color: #000000; font-weight: bold;">new</span> ZendUtil_Validate_EmailAddress<span style="color: #009900;">&#41;</span>
+      <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setRequired</span><span style="color: #009900;">&#40;</span><span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+    <span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">addElement</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$email</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+  <span style="color: #009900;">&#125;</span>
+<span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>In addition, you can simply translate the <em>emailAddressInvalid</em> message.</li>
+<li>For sticklers, setting options in <em>isValid</em> method is hardcoded with look like a messy code, but it is quick-fix</li>
+</ul>
+<p>Hope it will help.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/single-error-message-zend_validate_emailaddress/#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/single-error-message-zend_validate_emailaddress/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[PHP cache, semafory]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/php-cache-semafory/" />
+		<id>http://athlan.pl/?p=728</id>
+		<updated>2011-06-12T16:43:13Z</updated>
+		<published>2011-06-11T22:11:46Z</published>
+		<category scheme="http://athlan.pl" term="Databases" /><category scheme="http://athlan.pl" term="Optymalizacja" /><category scheme="http://athlan.pl" term="PHP" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Przemyślenia" /><category scheme="http://athlan.pl" term="Publikacje" /><category scheme="http://athlan.pl" term="Server" /><category scheme="http://athlan.pl" term="Solutions" />		<summary type="html"><![CDATA[Praktyka cache&#8216;owania danych jest powszechna wśród programistów aplikacji webowych ze względu na optymalizację dostępu do danych bezpośrednio ze źródła ich pochodzenia, a w szczególności: trudność dostępu (np. wykonanie skomplikowanych połączeń), ograniczenia dostępu (np. limit odpytywania), długi czas oczekiwania na dane; powodów jest wiele. O ile tematyką stworzenia samego mechanizmu cache zajęli się m.in. Nospor, możecie [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/php-cache-semafory/"><![CDATA[<p>Praktyka <strong>cache</strong>&#8216;owania danych jest powszechna wśród programistów aplikacji webowych ze względu na optymalizację dostępu do danych bezpośrednio ze źródła ich pochodzenia, a w szczególności:</p>
+<ul>
+<li>trudność dostępu (np. wykonanie skomplikowanych połączeń),</li>
+<li>ograniczenia dostępu (np. limit odpytywania),</li>
+<li>długi czas oczekiwania na dane; powodów jest wiele.</li>
+</ul>
+<p>O ile tematyką stworzenia samego mechanizmu cache zajęli się m.in. <a href="http://forum.php.pl/klasa-Cache-t49472.html" rel="nofollow">Nospor</a>, możecie podejrzeć jak to wygląda w <a href="http://framework.zend.com/manual/en/zend.cache.html" rel="nofollow">Zend_Cache</a>, Symfony, czy <a href="http://docs.kohanaphp.com/libraries/cache" rel="nofollow">Kohana</a>; tak ja chciałbym zwrócić uwagę na jeszcze jedną rzecz.</p>
+<p>Zazwyczaj schemat kodu wygląda mniej więcej tak:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #339933;">&lt;</span> ?php
+<span style="color: #000088;">$oCache</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Cache<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// tworzony jest jakis obiekt cache</span>
+&nbsp;
+<span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$oCache</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">expired</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">3600</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> <span style="color: #339933;">!</span><span style="color: #990000;">is_array</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$aData</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$oCache</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">load</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span> <span style="color: #666666; font-style: italic;">// sprawdzamy, czy jest cache i nie wygasł</span>
+<span style="color: #009900;">&#123;</span>
+  <span style="color: #000088;">$aData</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$oModel</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">GetSomething</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// zbieramy dane z bazy danych</span>
+  <span style="color: #000088;">$oCache</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">save</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$aData</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">// $aData przechowuje nasze dane do użytku</span>
+<span style="color: #000000; font-weight: bold;">?&gt;</span></pre></td></tr></table></div>
+
+<h2>Symulacja, parę linijek kodu, a ile nieszczęść.</h2>
+<p>Wszystko działa pięknie, dopóki nie spotkamy się z sytuacją, gdy setki osób (procesów) jednocześnie zechcą zbierać takie dane z bazy danych. Przeprowadźmy zatem krótką dywagację. Załóżmy, że użytkownik #1 wchodzi na stronę, stwierdza, że nie ma cache, lub jest nieświeży, wówczas przechodzi do połączenia się z bazą danych i zaczyna zbierać dane. W tym samym czasie, zanim użytkownikowi #1 zostaną zwrócone dane wchodzi użytkownik #2, który stwierdza, że nie ma cache, bo użytkownik #1 jeszcze nie zebrał danych, postanawia połączyć się z bazą i zrobić to samo, co użytkownik #1, powtarzając niepotrzebnie czynność i dodatkowo obciążając bazę. Można by iść dalej i wprowadzić <em>n</em> użytkowników, którzy powtarzają czynność, dopóki dane nie pojawią się w cache i kolejni użytkownicy będą z niego korzystać. Co się stanie natomiast, gdy kolejka tak narośnie, że użytkownikowi #1 zabraknie zasobów systemowych, aby ukończyć proces zbierania danych, co spowoduje, że pozostałym też? Kolejka będzie wydłużała się w nieskończoność, póki system operacyjny nie podejmie żadnych działań (np. odłączy bazę danych, lub po prostu wyłączy serwer, np. w <a href="http://pl.wikipedia.org/wiki/IIS" rel="nofollow">IIS7</a> wyłączy cały application pool). Aby doszło do tej kolizji nie jest potrzebne wcale natężenie użytkowników, serwer może akurat np. zajmować się wysyłką maili lub nieoptymalnie zrobionym procesem, który zajmuje zasoby, a w tym czasie wejdzie tylko pięciu użytkowników.</p>
+<p>Parę linijek kodu, a ile nieszczęść.</p>
+<h2>Pojęcie semafora.</h2>
+<blockquote><p>Semafor w informatyce &#8211; jest chronioną zmienną lub abstrakcyjnym typem danych, który stanowi klasyczną metodę kontroli dostępu przez wiele procesów do wspólnego zasobu w środowisku programowania równoległego.</p></blockquote>
+<p>Więcej na temat semaforów na <a href="http://pl.wikipedia.org/wiki/Semafor_(informatyka)" rel="nofollow">Wikipedii</a>, bądź w <em>Podstawy informatyki / Stefan Węgrzyn. &#8211; Warszawa : Państwowe Wydawnictwo Naukowe, 1982</em>.</p>
+<h2>Podejście do problemu.</h2>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #339933;">&lt;</span> ?php
+<span style="color: #000088;">$oCache</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Cache<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$oCache</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">expired</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">3600</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> <span style="color: #339933;">!</span><span style="color: #990000;">is_array</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$aData</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$oCache</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">load</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+  <span style="color: #000088;">$oCache</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">savePrepare</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// stawiamy semafor</span>
+&nbsp;
+  <span style="color: #000088;">$aData</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$oModel</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">GetSomething</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+  <span style="color: #000088;">$oCache</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">save</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$aData</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// metoda save() może (nie musi) od razu zwolnić semafor, gdy próba zapisu się zakończy</span>
+  <span style="color: #666666; font-style: italic;">// jeżeli metoda save() nie zwalnia zasobu, możemy np. użyć:</span>
+  <span style="color: #666666; font-style: italic;">// $oCache-&gt;saveFinalize();</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">// $aData przechowuje nasze dane do użytku</span>
+<span style="color: #000000; font-weight: bold;">?&gt;</span></pre></td></tr></table></div>
+
+<p>Rozwiązaniem jest zastosowanie <strong>semafora</strong> blokującego dostęp do zasobu (w tym przypadku abstrakcyjnie &#8220;cache&#8221;, mniej abstrakcyjnie może być to plik na dysku, przestrzeń w pamięci operacyjnej, rekord w bazie danych, cokolwiek, co cache przerzymuje). Dla wartości semafora = 1 zasób jest wolny (nieużywany, jest 1 cache), gdy jest mniejszy/równy 0 zasób jest zajęty, ktoś z niego &#8220;korzysta&#8221;. Zajętość zasobu powinna być sprawdzana przy próbie odczytu. Dopóki zasób nie zostanie zwolniony, nie będzie można określić, czy są dane w cache. Jeżeli nie można określić, czy dane są w cache, należy zaczekać na zwolnienie zasobu.</p>
+<p>Teraz nasze rozwiązanie nie dopuści do przytoczonej w powyższym przykładzie sytuacji. Zanim cache nie zostanie odblokowany po próbie zapisu, nie uzyskamy odczytu, czekając na niego i nie przechodząc w skrypcie nigdzie dalej.</p>
+<p>Gdy <code>save()</code> się nie powiedzie? Można zastosować timeouty odczytu na <code>load()</code>. Wówczas złapalibyśmy wyjątek i przeszli dalej do realizacji zapisu, tak, jakby semafora nie było.</p>
+<h2>Implementacja.</h2>
+<p>Do swoich kodów podchodzę jak najbardziej abstrakcyjnie (tutaj idealnie nada się <a href="http://pl.wikipedia.org/wiki/Fabryka_abstrakcyjna_(wzorzec_projektowy)">wzorzec fabryki</a>), zatem stworzyłem klasę <em>Cache</em>, która obsługuje &#8216;silniki&#8217; implementujące interfejs <em>Cache_Engine</em>. Jednym z nich jest silnik <em>Cache_Engine_File</em>, który wykorzystuje pliki na dysku do składowania cache.</p>
+<p>Najprostszym semaforem dla plików jest funkcja <code><a href="http://php.net/flock">flock()</a></code> (gotowe, sprawdzone rozwiązanie, w dodatku na poziomie systemu plików, nic tylko implementować). Sprawa wygląda bardzo prosto, dopóki nie zwolnimy flagi <code>LOCK_EX</code> po jej założeniu, ludzie nie będą czytali z pliku, czekając na zwolnienie dostępu. Ktoś powie: truizm, blokować pliki powinno się przed wykonywaniem na nich operacji. Tak. Ale grunt, w którym miejscu to zablokowanie nastąpi. Wykorzystujemy blokowanie do wyższego celu.</p>
+<p>Wg. dokumentacji nie można polegać na <code>flock()</code> w przypadku Windows98 oraz systemów FAT32. Zbyt dużym poziomem abstrakcji jest dla mnie stawianie serwisu na pamięci flash lub Win98, ale faktycznie, najprostsza pamięć flash z systemem FAT32 może się czasem zdarzyć w serwerowniach i nie jest to wcale taki głupi pomysł. Co wtedy? Jako semafor możemy stworzyć plik z suffiksem <em>.lock</em> obok tworzonego pliku cache. Gdy plik istnieje oznacza to, że cache jest zablokowany, jeżeli nie &#8211; jest wolny. Czekamy tak długo, aż zostanie usunięty plik <em>.lock</em>.</p>
+<h2>Przykładowy kod źródłowy.</h2>
+<p>Przykładowy kod źródłowy obsługuje <em>Cache_Engine_File</em> oraz <em>Cache_Engine_Filelock</em>, gdzie w drugim przypadku można klasy użyć spokojnie na partycjach FAT32. Kod jest przykładowy, dlatego nie obsługuje m.in. zagnieżdżania plików w katalogach, usuwanie cache&#8217;u itd, zaimplementowałem tylko zapis i odczyt.</p>
+<p>Klasy zostały napisane tak, aby zgłaszane przez nie błędy były <a href="http://www.php.net/manual/en/spl.exceptions.php">zgodnie z ideologią hierarchiczną Exceptions w PHP</a>, przy okazji zapraszam do lektury wpisu <a href="http://www.zyxist.com/pokaz.php/wyjatki_w_php">&#8220;Wyjątki w PHP&#8221;</a> autorstwa Tomasza Jędrzejewskiego (Zyxits).</p>
+<ul>
+<li><a href="http://athlan.pl/code/lib-cache/Cache">Klasa Cache</a>, Cache_Exception, abstrakcja Cache_Engine</li>
+<li><a href="http://athlan.pl/code/lib-cache/Cache/Engine/File">Klasa Cache_Engine_File</a>, która bazuje na plikach</li>
+<li><a href="http://athlan.pl/code/lib-cache/Cache/Engine/Filelock">Klasa Cache_Engine_Filelock</a>, która bazuje na plikach + tworzy pliki <em>.lock</em></li>
+</ul>
+<p>Przykładowe czekanie na zwolnienie pliku <em>.lock</em>:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #339933;">&lt;</span> ?php
+&nbsp;
+<span style="color: #000000; font-weight: bold;">protected</span> <span style="color: #000000; font-weight: bold;">function</span> _waitUnlock<span style="color: #009900;">&#40;</span><span style="color: #000088;">$iWaitTimeout</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+  <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$iWaitTimeout</span><span style="color: #009900;">&#41;</span>
+  <span style="color: #009900;">&#123;</span>
+    try
+    <span style="color: #009900;">&#123;</span>
+      <span style="color: #666666; font-style: italic;">// quick first check</span>
+      <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">is_file</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span>_path<span style="color: #009900;">&#40;</span><span style="color: #009900; font-weight: bold;">false</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'lock'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+      <span style="color: #009900;">&#123;</span>
+        <span style="color: #666666; font-style: italic;">// wait for unlock file</span>
+        <span style="color: #000088;">$iWaitTimeout</span> <span style="color: #339933;">/=</span> <span style="color: #cc66cc;">1000000</span><span style="color: #339933;">;</span>
+        <span style="color: #000088;">$iLockTime</span> <span style="color: #339933;">=</span> <span style="color: #990000;">microtime</span><span style="color: #009900;">&#40;</span><span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #000088;">$bLockWait</span> <span style="color: #339933;">=</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #666666; font-style: italic;">// wait for the file</span>
+        try
+        <span style="color: #009900;">&#123;</span>
+          <span style="color: #b1b100;">while</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">is_file</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span>_path<span style="color: #009900;">&#40;</span><span style="color: #009900; font-weight: bold;">false</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'lock'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+          <span style="color: #009900;">&#123;</span>
+            <span style="color: #000088;">$iLockWaitDelta</span> <span style="color: #339933;">=</span> <span style="color: #990000;">microtime</span><span style="color: #009900;">&#40;</span><span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">-</span> <span style="color: #000088;">$iLockTime</span><span style="color: #339933;">;</span>
+&nbsp;
+            <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$iLockWaitDelta</span> <span style="color: #339933;">&gt;</span> <span style="color: #000088;">$iWaitTimeout</span> <span style="color: #339933;">&amp;&amp;</span> <span style="color: #000088;">$iWaitTimeout</span> <span style="color: #339933;">!==</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span>
+              <span style="color: #009900;">&#123;</span> <span style="color: #000088;">$bLockWait</span> <span style="color: #339933;">=</span> <span style="color: #009900; font-weight: bold;">false</span><span style="color: #339933;">;</span> <span style="color: #b1b100;">break</span><span style="color: #339933;">;</span> <span style="color: #009900;">&#125;</span>
+&nbsp;
+            <span style="color: #990000;">usleep</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">rand</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">999</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+          <span style="color: #009900;">&#125;</span>
+        <span style="color: #009900;">&#125;</span>
+        <span style="color: #666666; font-style: italic;">// cache lock path does not exists</span>
+        catch<span style="color: #009900;">&#40;</span>Cache_Exception_Runtime <span style="color: #000088;">$oE</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span>
+&nbsp;
+        <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #339933;">!</span><span style="color: #000088;">$bLockWait</span><span style="color: #009900;">&#41;</span>
+          <span style="color: #b1b100;">throw</span> <span style="color: #000000; font-weight: bold;">new</span> Cache_Exception_Runtime<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Unable to access cache, it is totally locked, after &quot;'</span> <span style="color: #339933;">.</span> <span style="color: #000088;">$iWaitTimeout</span> <span style="color: #339933;">.</span> <span style="color: #0000ff;">'&quot; s.'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+      <span style="color: #009900;">&#125;</span>
+    <span style="color: #009900;">&#125;</span>
+    <span style="color: #666666; font-style: italic;">// cache lock path does not exists</span>
+    catch<span style="color: #009900;">&#40;</span>Cache_Exception_Runtime <span style="color: #000088;">$oE</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span>
+  <span style="color: #009900;">&#125;</span>
+  <span style="color: #b1b100;">else</span>
+  <span style="color: #009900;">&#123;</span>
+    try
+    <span style="color: #009900;">&#123;</span>
+      <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">is_file</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span>_path<span style="color: #009900;">&#40;</span><span style="color: #009900; font-weight: bold;">false</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'lock'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #b1b100;">throw</span> <span style="color: #000000; font-weight: bold;">new</span> Cache_Exception_Runtime<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Unable to access cache, it is currently locked, after &quot;'</span> <span style="color: #339933;">.</span> <span style="color: #000088;">$iWaitTimeout</span> <span style="color: #339933;">.</span> <span style="color: #0000ff;">'&quot; s.'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+    <span style="color: #666666; font-style: italic;">// cache path does not exists</span>
+    catch<span style="color: #009900;">&#40;</span>Cache_Exception_Runtime <span style="color: #000088;">$oE</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span>
+  <span style="color: #009900;">&#125;</span>
+&nbsp;
+  <span style="color: #b1b100;">return</span> <span style="color: #009900; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">?&gt;</span></pre></td></tr></table></div>
+
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/php-cache-semafory/#comments" thr:count="12"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/php-cache-semafory/feed/atom/" thr:count="12"/>
+		<thr:total>12</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[Atak XSS na $_SERVER[&#039;HTTP_X_FORWARDED_FOR&#039;]]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/atak-xss-server-http-x-forwarded-for/" />
+		<id>http://athlan.pl/?p=706</id>
+		<updated>2011-05-29T15:10:04Z</updated>
+		<published>2011-05-28T12:40:13Z</published>
+		<category scheme="http://athlan.pl" term="Internet" /><category scheme="http://athlan.pl" term="PHP" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Publikacje" /><category scheme="http://athlan.pl" term="Security" /><category scheme="http://athlan.pl" term="Solutions" /><category scheme="http://athlan.pl" term="SQL" />		<summary type="html"><![CDATA[Dziś bardzo krótko, bez zbędnych dywagacji, czyli tylko i wyłącznie o tablicy $_SERVER. Dbając o bezpieczeństwo aplikacji webowych zwraca się uwagę na wiele czynników, jakimi są SQL injections, przechwytywanie nieprawidłowych parametrów, uogólniające zapytania przepuszczające maskę % w LIKE zapytaniu do baz, XSS&#8216;y w $_POST, $_GET. I finalnie&#8230; wiele osób zapomina (a jeszcze więcej nie jest [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/atak-xss-server-http-x-forwarded-for/"><![CDATA[<p>Dziś bardzo krótko, bez zbędnych dywagacji, czyli tylko i wyłącznie o tablicy <code>$_SERVER</code>. Dbając o bezpieczeństwo aplikacji webowych zwraca się uwagę na wiele czynników, jakimi są <em>SQL injections</em>, przechwytywanie nieprawidłowych parametrów, uogólniające zapytania przepuszczające maskę % w <em>LIKE</em> zapytaniu do baz, <em><acronym title="Cross-site scripting">XSS</acronym></em>&#8216;y w <code>$_POST</code>, <code>$_GET</code>.</p>
+<p>I finalnie&#8230; wiele osób zapomina (<u>a jeszcze więcej nie jest tego świadom</u>) o możliwości wstrzyknięcia szkodliwych danych w <code>$_SERVER['HTTP_X_FORWARDED_FOR']</code>;. <u>Konsekwencje są oczywiście katastrofalne</u>.</p>
+<p>O ile sama walidacja jest rzeczą wtórną, diabeł tkwi w trzech szczegółach:</p>
+<ol>
+<li>Rzecz trywialna, ale pamiętajmy, że w naturalnym procesie użytkowania przeglądarki, <strong>w nagłówku może zostać zwrócony nie tylko jeden adres IP</strong>, a kilka oddzielonych przecinkiem, w tym <em>localhost</em>&#8216;y (<a rel="nofollow" href="http://en.wikipedia.org/wiki/X-Forwarded-For">standard nagłówka <code>X-Forwarded-For</code></a>).</li>
+<li><strong>Wstrzyknięcie Javascriptów</strong> jest możliwe, ale notabene najmniej szkodliwe, bo do spreparowania nagłówka potrzebny jest bardziej zaawansowany proces (dajmy na to Data Tamping, który przedstawię poniżej), np. niż wklejenie syfu w linku/obrazku i przesłanie go komuś przez komunikator, żeby wykraść jego ciasteczka sesyjne <code>document.cookie</code> i przesłać je sobie na serwer w dowolny sposób, <strong>zatem atakowi nie ulegną osoby trzecie</strong>.</li>
+<li><strong>Niepoprawność danych</strong>, które można zmanipulować, jest chyba rzeczą oczywistą: nieprzepuszczenie takich danych przez filtry może skutkować złymi wartościami zwracanymi np. przez <code><a href="http://php.net/ip2long">ip2long()</a></code> i zapis w zupełności nieprzydatnych nam później danych do bazy.</li>
+<li>&#8230; <strong>ale największe nieprzyjemności</strong> możemy mieć przez spreparowanie lewych zapytań do baz danych, o ile nie używamy sprawdzonych ORM lub czegokolwiek, co pomaga nam filtrować wartości do niej przekazywane i używane w warunkach zapytań (data binding).</li>
+</ol>
+<p>Przykład tampingu danych, żeby spreparować niepożądane efekty.</p>
+<p>Mamy bardzo prosty, niebezpieczny kod funkcji, która pobiera pierwszy adres na liście adresów oddzielonych przecinkami z <code>$_SERVER['HTTP_X_FORWARDED_FOR']</code> o ile istnieje, natomiast w przeciwnym wypadku <code>$_SERVER['REMOTE_ADDR']</code>:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #339933;">&lt;</span> ?php
+&nbsp;
+<span style="color: #000000; font-weight: bold;">function</span> getUserIp<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+  <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">isset</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$_SERVER</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'HTTP_X_FORWARDED_FOR'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #b1b100;">return</span> <span style="color: #990000;">trim</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">current</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">explode</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">','</span><span style="color: #339933;">,</span> <span style="color: #000088;">$_SERVER</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'HTTP_X_FORWARDED_FOR'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+  <span style="color: #b1b100;">return</span> <span style="color: #000088;">$_SERVER</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'REMOTE_ADDR'</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #000088;">$sUserIP</span> <span style="color: #339933;">=</span> getUserIp<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'Hi &quot;'</span> <span style="color: #339933;">.</span> <span style="color: #000088;">$sUserIP</span> <span style="color: #339933;">.</span> <span style="color: #0000ff;">'&quot;!'</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// first bug while display.</span>
+<span style="color: #990000;">var_dump</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">ip2long</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$sUserIP</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// second bug while transforming data.</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">?&gt;</span></pre></td></tr></table></div>
+
+<p><strong>Pora na przykład manipulacji takich danych.</strong></p>
+<ul>
+<li>Będziemy używać <a href="https://addons.mozilla.org/en-us/firefox/addon/tamper-data/">Tamper Data</a> dla Firefox&#8217;a.<br />Dość popularny wśród developerów addon do Firefox&#8217;a, pozwala zmodyfikować dane <code>$_POST</code>, <code>$_GET</code>, <code>$_COOKIE</code>, nagłówki, &#8220;w locie żądania&#8221; etc.</li>
+<li>Po instalacji w menu <em>Narzędzia</em> pojawi się pozycja <em>Dane Tamper</em>, która uruchamia okienko do podsłuchiwania żądań. Po kliknięciu <em>Rozpocznij</em> podsłuchujemy wszystkie wychodzące żądania z naszej przeglądarki. Każde żądanie nie zostanie przepuszczone, dopóki go nie zmanipulujemy klikając <em>Tamper</em>, lub przepuścimy dalej klikając <em>Wyślij</em>.</li>
+<li>Jeżeli zdecydujemy się Tamper&#8217;ować żądanie, naszym oczom ukaże się okno z parametrami. Klikamy prawym przyciskiem myszy na listę parametrów, wybieramy Dodaj i wpisujemy nasz przykładowy, brzydki dla aplikacji nagłówek:<br />
+<code>X_FORWARDED_FOR=&lt;script&gt;alert('Test.')&lt;/script&gt;</code></li>
+</ul>
+<p>Naszym oczom ukazują się co najmniej dwa błędy. Pierwszy to błąd prezentacji danych, który wykorzystuje <code>&lt;script&gt;</code>. O ile nie musimy się tym przejmować, bo naturalnie takie żądania nie są tak łatwo wysyłane, użytkownik nie może paść ofiarą ataku przez kliknięcie w link, który np. ukradnie mu ciasteczka. Dane nagłówkowe nie są w stanie być zmodyfikowane poprzez kliknięcie w link, podobnie jak z danymi <code>$_POST</code> (oczywiście mówimy o przypadkach trywialnych, bez javascript&#8217;owych wymuszanych submitów targetowanych do np. ramek).</p>
+<p>Znacznie poważniejszym błędem jest konsekwencja wadliwego formatu danych, które nasza funkcja bagatelizuje. Po pierwsze mamy fałszywe dane zwracane przez <code><a href="http://php.net/ip2long">ip2long()</a></code>, po drugie kto powiedział, że właśnie z tej funkcji korzystamy, a nie zapisujemy danych plain&#8217;em i nie bindujemy pofiltrowanych danych lub instrukcji warunkowych zapytania przez np. sprawdzony ORM.</p>
+<p><strong>Rozwiązanie problemu.</strong></p>
+<p>Edit: Jak słusznie zauważył Zyx, zapomniałem o tym wspomnieć, że skoro mogą znaleźć się tam dowolne dane przesłane od użytkownika, <strong>nie należy tego pola traktować jako wyznacznik, że jest to numer jego IP</strong>, <u>jest ono bezużyteczne i powoduje potencjalną lukę</u>. Poza zabezpieczeniami to podstawowy argument, żeby o polu zapomnieć i używać <code>$_SERVER['REMOTE_ADDR']</code>.</p>
+<p>Po pierwsze funkcja powinna sprawdzać dane wejściowe chociażby <code><a href="http://php.net/preg-match">preg_match()</a></code> lub konwersją do <code><a href="http://php.net/ip2long">ip2long()</a></code> i (jeżeli jest taka potrzeba) spowrotem do <code><a href="http://php.net/long2ip">long2ip()</a></code>. Dwa, pamiętajmy, że w X_FORWARDED_FOR znajdują się śmieci, adresy lokalne sieci,  itd., które należy pominąć przy wyborze adresu z listy po przecinku.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/atak-xss-server-http-x-forwarded-for/#comments" thr:count="2"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/atak-xss-server-http-x-forwarded-for/feed/atom/" thr:count="2"/>
+		<thr:total>2</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[Indeksowanie baz danych, funkcje mieszające]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/indeksowanie-baz-danych-funkcje-mieszajace/" />
+		<id>http://athlan.pl/?p=691</id>
+		<updated>2011-04-14T18:37:49Z</updated>
+		<published>2011-04-13T19:20:40Z</published>
+		<category scheme="http://athlan.pl" term="Databases" /><category scheme="http://athlan.pl" term="Matematyka" /><category scheme="http://athlan.pl" term="Optymalizacja" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Przemyślenia" /><category scheme="http://athlan.pl" term="Publikacje" /><category scheme="http://athlan.pl" term="Solutions" /><category scheme="http://athlan.pl" term="baza" /><category scheme="http://athlan.pl" term="baza danych" /><category scheme="http://athlan.pl" term="database" /><category scheme="http://athlan.pl" term="indeksowanie" /><category scheme="http://athlan.pl" term="optymalizacja" />		<summary type="html"><![CDATA[Występowanie złożonych baz danych jest coraz bardziej popularne, a komercyjne rozwiązania praktykują składowanie informacji nie tylko na pojedynczych bazach, przestrzeniach, dyskach, czy nawet serwerach. Szybki dostęp do danych to podstawa, dlatego pochylimy się nad czysto teoretycznym problemem dostępu do informacji, które wprawdzie są rozwiązane i zaszyte w mechanizmach poruszania się po większości baz, natomiast ich [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/indeksowanie-baz-danych-funkcje-mieszajace/"><![CDATA[<p>Występowanie złożonych baz danych jest coraz bardziej popularne, a komercyjne rozwiązania praktykują składowanie informacji nie tylko na pojedynczych bazach, przestrzeniach, dyskach, czy nawet serwerach. Szybki dostęp do danych to podstawa, dlatego pochylimy się nad czysto teoretycznym problemem dostępu do informacji, które wprawdzie są rozwiązane i zaszyte w mechanizmach poruszania się po większości baz, natomiast ich znajomość pozwoli dodatkowo zoptymalizować struktury, które projektujemy. Z góry podkreślam, że artykuł jest bynajmniej wyczerpujący, specjalistycznej i bardziej szczegółowo zarysowanej teorii baz danych należy szukać w publikacjach i tu zachęcam do odwiedzenia politechnicznych bibliotek.</p>
+<p>Baza danych jako zbiór informacji powinna oferować trzy podstawowe operacje:</p>
+<ul>
+<li><strong>Szukanie</strong> jako dostęp do pojedynczego, unikatowego „obiektu” (zazwyczaj rekordu) w bazie danych.</li>
+<li><strong>Wyszukiwanie</strong> jako dostęp do elementów spełniających dane kryteria.</li>
+<li><strong>Modyfikacja</strong> danych.</li>
+</ul>
+<h2>Pojęcie klucza</h2>
+<p><strong>Kluczem</strong> w bazie danych jest atrybut każdego elementu/rekordu jakiejś klasy (np. pojedynczej tabli danych), który pomoże go zidentyfikować przy szukaniu lub wyszukiwaniu w sposób jednoznaczny (wtedy mówi się o kluczu podstawowym <em>Primary Key</em>) lub niejednoznaczny (wtedy mówi się o indeksie <em>Index</em>). Za pomocą klucza jesteśmy w stanie dostać się do rekordu przeszukując tylko strukturę indeksów, zamiast samą bazę.</p>
+<h2>Skrócenie drogi dostępu</h2>
+<p>Przy szukaniu konkretnego elementu, którego unikalny atrybut jest z góry znany używamy właśnie <em>kluczy podstawowych</em>. Jest to gigantyczne przyspieszenie procesu wyszukania elementu. Jak wiemy, niektóre klucze zachowują pewną prawidłowość, na przykład stale rosną. Najprostszym przykładem jest identyfikator rekordu, którego wartość zazwyczaj się inkrementuje. Klucze to nic innego jak para informacji: wartość klucza oraz adres komórki pamięci, do której klucz należy.</p>
+<p>Wykorzystanie klucza podstawowego to wskazanie miejsca ulokowania rekordu w dowolnej pamięci  (na przykład adresu pamięci, adresu na dysku, offset w pliku, itd.)</p>
+<h2>Uporządkowany zbiór kluczy podstawowych</h2>
+<p>Co nam daje uporządkowany zbiór kluczy? Żeby dowiedzieć się, gdzie w pamięci jest ulokowany nasz rekord, najpierw trzeba dostać się do wartości klucza. W przypadku uporządkowanego zbioru danych wartości kluczy możemy w łatwy sposób go odnaleźć, na przykład <em>metodą połowienia zbioru</em> lub dostępu do wcześniej ułożonego <em>drzewa</em>. Najoptymalniejsze do odszukiwania jest <em>drzewo ważone</em>, ponieważ w przypadku nieważonego przy stale wzrastającej wartości klucza przy prawidłowości, że prawe gałęzie drzewa mają wartości większe, drzewo rosłoby tylko w jedną stronę, a w rezultacie otrzymalibyśmy listę, w której odszukiwanie nie jest optymalnym rozwiązaniem. Ważenie drzewa nie jest jednak rozsądnym rozwiązaniem w bazach danych, w których jest więcej żądań (a właściwie czasu propagacji) do zapisu danych, niż odczytu.</p>
+<p>Suma sumarum, w zależności od typu bazy (relacyjna, obiektowej, strumieniowej, itd.) oraz jej złożoności, należy wybrać odpowiedni mechanizm układania indeksów.</p>
+<h2>Funkcja mieszająca</h2>
+<p>Rodzi się pytanie. Gdy mamy taką strukturę składowania indeksów niejednoznacznych, tj. kilka rekordów może mieć dokładnie taką samą wartość klucza. Prostym przykładem jest indeksowanie dłuższych ciągów znaków, do których chcemy mieć natychmiastowy dostęp bez wyszukiwania ich w bazie danych w sposób bezpośredni. Do identyfikacji takich struktur służą <a href="http://pl.wikipedia.org/wiki/Tablica_mieszaj%C4%85ca">funkcje mieszające</a>. <em>Przykład</em>. Wyobraźmy sobie, że podczas zapisu danych podając dane jako argument funkcji mieszającej, zamieniamy każdy znak ciągu znaków na odpowiadający mu kod ASCII, następnie sumujemy liczby i dzielimy modulo 90, nasz wynik to wartość indeksu. Tę samą operację wykonujemy dla kryterium późniejszego wyszukiwania podając go jako argument funkcji mieszającej. Wystarczy porównać nasze kryterium z kluczami. Mamy 90 możliwości otrzymanych wyników.</p>
+<p>Działanie funkcji mieszającej:</p>
+<p><img class="aligncenter size-full wp-image-693" title="funkcja-mieszajaca-dzialanie" src="http://athlan.pl/wp-content/uploads/funkcja-mieszajaca-dzialanie.png" alt="" width="232" height="225" /></p>
+<p>Im większe modulo, tym bardziej rozległy indeks i bardziej unikatowy indeks. Niestety, pod jednym kluczem może znajdować się wiele rekordów, przykładowo: ABC, CAB, AAD, AE, F, itd&#8230; wówczas występuje tzw. <em>kolizja</em>. Podstawową wadą funkcji mieszającej może być złożoność obliczeniowa dla zwracanej wartości. Ponadto obecne systemy baz danych zapewniają ciągłość z góry zadeklarowanej pamięci, zatem przeszukiwanie takich komórek może być znacznie szybsze, od przeszukiwania kluczy. Funkcja mieszająca plus indeksowanie adresów jest zdecydowanie dobrym rozwiązaniem, gdy przeszukiwanie indeksów jest korzystniejsze pod względem czasu dostępu do informacji (np. czas propagacji dysku, odszukanie fragmentu pliku, etc.).</p>
+<h2>Występowanie kolizji</h2>
+<p>Metod <a href="http://pl.wikipedia.org/wiki/Tablica_mieszaj%C4%85ca#Rozwi.C4.85zywanie_problemu_kolizji">obsługi kolizji</a> jest bardzo wiele. Podstawową jest stworzenie listy elementów, które są przypisane do danego klucza. Może ich być wiele, natomiast to i tak bardzo dobra optymalizacja przeszukiwania bazy danych.</p>
+<p><img class="aligncenter size-full wp-image-694" title="funkcja-mieszajaca-kolizje" src="http://athlan.pl/wp-content/uploads/funkcja-mieszajaca-kolizje.png" alt="" width="668" height="367" /></p>
+<p>Częstotliwość występowania kolizji w grubym przybliżeniu obrazuje wykres. Zauważmy, że jeżeli wyczerpiemy ~60% możliwości wystąpienia tych samych kluczy, kolizyjność wzrasta wykładniczo, a używanie funkcji mieszących przy wstawianiu rekordu bazy danych staje się nieoptymalne, w zależności od implementacji korekcji kolizji (powtórzenia rozwiązania kolizji). Przy dołączaniu elementu do listy jednokierunkowej (wcześniejszy obraz) nie stanowi to jednak większego problemu. Gdy &lt; 60% możliwości kluczy jest niewykorzystanych, występowanie kolizji jest znikome.</p>
+<p><img class="aligncenter size-full wp-image-695" title="funkcja-mieszajaca-kolizje-wykres" src="http://athlan.pl/wp-content/uploads/funkcja-mieszajaca-kolizje-wykres.png" alt="" width="500" height="371" /></p>
+<p><strong>Idealna funkcja mieszająca</strong></p>
+<p>Mówiąc o idealnej funkcji mieszającej mamy na myśli skonstruowanie takiej funkcji, która przyporządkuje mniej więcej po tej samej liczbie swoich zwracanych wartości, tj. dla naszego przykładu modulo 90, każdy klucz będzie miał porównywalną liczbę rekordów przypisanych do danego indeksu. Intuicyjnie: <span style="text-decoration: underline;">można to wykonać tylko wtedy, kiedy z góry znamy dziedzinę tej funkcji</span> bądź w przybliżeniu spodziewamy się znanych danych wejściowych. Budowanie idealnych funkcji mieszających jest skomplikowaną operacją matematyczną. Jednym ze sposobów do naszego przykładu, przy znanej dziedzinie funkcji mieszającej jest przypisywanie kolejnym literom wag, które po zsumowaniu i podzieleniu przez modulo, jest wygenerowanie takiej kombinacji wag, żeby zwracane wartości były równie często obliczane dla całej dziedziny funkcji (każda liczba modulo jest wykorzystywana po mniej więcej N razy).</p>
+<h2>Zakończenie</h2>
+<p>Temat teoretycznych rozważań budowy baz danych na pewno będę kontynuował. Tak, jak zaznaczyłem we stępie, artykuł bynajmniej wyczerpuje tematykę, a zainteresowanych zapraszam do przekroczenia progów politechnicznych bibliotek.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/indeksowanie-baz-danych-funkcje-mieszajace/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/indeksowanie-baz-danych-funkcje-mieszajace/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[Optymalizacja zapytań MySQL dla koniunkcji wielu danych]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/optymalizacja-zapytan-mysql/" />
+		<id>http://athlan.pl/?p=670</id>
+		<updated>2011-01-16T11:43:18Z</updated>
+		<published>2011-01-15T15:54:17Z</published>
+		<category scheme="http://athlan.pl" term="Databases" /><category scheme="http://athlan.pl" term="Matematyka" /><category scheme="http://athlan.pl" term="Optymalizacja" /><category scheme="http://athlan.pl" term="php.pl" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Przemyślenia" /><category scheme="http://athlan.pl" term="Publikacje" /><category scheme="http://athlan.pl" term="Solutions" /><category scheme="http://athlan.pl" term="database" /><category scheme="http://athlan.pl" term="InnoDB" /><category scheme="http://athlan.pl" term="md5" /><category scheme="http://athlan.pl" term="mysql" /><category scheme="http://athlan.pl" term="optymalizacja" /><category scheme="http://athlan.pl" term="SQL" />		<summary type="html"><![CDATA[Nie raz, nie dwa mieliśmy sytuację, która wymagała od nas koniunkcji warunków większej ilości danych lub dane te były tekstowe, ale niedługie. Niby nic, klucze załatwiają sprawę, ale sięgając do kodu gry bukmacherskiej, musiałem ją nieco zoptymalizować pod względem częstego wyciągania danych. Baza rozrosła się dość szybko, dlatego niezbędna była lekka modyfikacja jej struktury. Moim zadaniem było bardzo częste [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/optymalizacja-zapytan-mysql/"><![CDATA[<p>Nie raz, nie dwa mieliśmy sytuację, która wymagała od nas koniunkcji warunków większej ilości danych lub dane te były tekstowe, ale niedługie. Niby nic, klucze załatwiają sprawę, ale sięgając do kodu gry bukmacherskiej, musiałem ją nieco zoptymalizować pod względem częstego wyciągania danych. Baza rozrosła się dość szybko, dlatego niezbędna była lekka modyfikacja jej struktury.</p>
+<p>Moim zadaniem było bardzo częste wyciągnięcie ID meczu, który musiał na raz (AND) być zgodny z żądaną datą, nazwą drużyny pierwszej oraz drugiej. Informacji do warunków dostarczał system. Oprócz daty, są to dane tekstowe, więc połączyłem je ze sobą <a href="http://dev.mysql.com/doc/refman/5.0/en/string-functions.html#function_concat">CONCAT</a> i stworzyłem z nich sumę md5. Indeks, po którym baza szukała, był już krótszy od warunków, bo zawierał zawsze 32 znaki. Pierwszym warunkiem koniunkcji zawsze była suma md5 wymienionych wcześniej pól rekordu, nazwałem to <strong>suma kontrolna </strong><strong>rekordu</strong>, potem faktyczna wartość pól, aby w razie zdublowania sumy kontrolnej (czego się nie spodziewamy, bo zakres wariacji jest ogromny, ale dla idei) wybrać prawidłowy rekord. Do tej pory wystarczało&#8230;</p>
+<p>Gdy baza rozrasta się, problemem staje się wyszukiwanie. O ile suma kontrolna to już krok w stronę optymalizacji, dla &gt;100k rekordów, baza danych potrzebowała co najmniej 0.05 sekundy na zwrócenie wyniku. Postanowiłem dodać <strong>odcisk palca sumy kontrolnej</strong>. Najlepszym rozwiązaniem okazało się <strong>dodanie jednego bajtu</strong>, który zrobił magię w bazie danych. Jedno pole TINYINT &#8211; 8 bitów, zakres 0-255 bez znaku. Założenia odcisku palca:</p>
+<ul>
+<li>jest wartością liczbową oraz zajmuje tylko jeden bajt, aby oszczędzić miejsca w rekordach oraz indeksach bazy danych,</li>
+<li>nie musi być uniwersalny (unikalny), a jedynie grupować odciski palców w mniejsze, a liczniejsze zbiory.</li>
+</ul>
+<p>Rozwiązanie, które zastosowałem przy generowanu odcisku palca sumy kontrolnej, również nie jest skomplikowane:</p>
+<ol>
+<li><strong>Odcisk palca to suma kolejnych znaków sumy kontrolnej rekordu</strong>, gdzie 0 &#8211; 9 zachowują swoje wartości, a litery [a-f] przyjmują kolejno [10-15], dokładnie jak w przeliczaniu pojedynczych wyrazów systemu liczbowego o podstawie 16 (HEX) na dziesiętny.</li>
+<li>Skoro jest to suma, to wartość minimalna jest dla samych zer, zatem <em>MIN</em> = 0.</li>
+<li>Wartość maksymalną można stworzyć podając same maksymalne wartości F, zatem <em>MAX</em> = 480.</li>
+<li>480 mieści się na 9 bitach (min. 2 bajty, zakres 0-65535 bez znaku, tracimy 65055 wartości), dzieląc liczbę przez 2 tracimy unikalność odcisku dwukrotnie, ale zmieścimy się na ośmiu bitach, czyli jednym bajcie &#8211; możemy użyć typu TINYINT (zakres 0-255 bez znaku, nasza to 0-240), zatem tracimy tylko 15 niewykorzystanych wartości.</li>
+</ol>
+<p><strong>Przeprowadzamy testy naszego rozwiązania.</strong></p>
+<p>Stwórzmy przykładową tabelę danych <em>test_md5_index</em>, która będzie przechowywała wartości tekstowe w polach <em>data_content</em>, <em>data_content2</em>, <em>data_content3</em>. Tabela może zawierać pole dodatkowe, ale te trzy będziemy wykorzystywać w naszym wyszukiwaniu. Ważnym jest to, że warunkiem jest koniunkcja (AND), dlatego możemy stworzyć sumę (analogicznie do sumy logicznej) md5 jako odcisk palca tych pól, który zapiszemy w <em>data_sum</em> varchar(32). Dodatkowo stworzymy odcisk palca odcisku palca &#8211; jednobajtowe pole <em>data_sum_index</em> TINYINT.</p>
+<p>Od razu zakładamy klucz podstawowy na <em>data_id</em> oraz klucz dla zapytania, który będzie go wykorzystywał, czyli szukanie wspólnie po <em>data_sum_index</em> oraz <em>data_sum</em>.</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">TABLE</span> test_md5_index <span style="color: #66cc66;">&#40;</span>
+  data_id <span style="color: #993333; font-weight: bold;">INT</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">11</span><span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">UNSIGNED</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span> <span style="color: #993333; font-weight: bold;">AUTO_INCREMENT</span><span style="color: #66cc66;">,</span>
+  data_sum_index tinyint<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">UNSIGNED</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">,</span>
+  data_sum <span style="color: #993333; font-weight: bold;">VARCHAR</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">32</span><span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">,</span>
+  data_contents text <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">,</span>
+  data_contents2 text <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">,</span>
+  data_contents3 text <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">,</span>
+  <span style="color: #993333; font-weight: bold;">PRIMARY</span> <span style="color: #993333; font-weight: bold;">KEY</span> <span style="color: #66cc66;">&#40;</span>data_id<span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">,</span>
+  <span style="color: #993333; font-weight: bold;">KEY</span> data_index <span style="color: #66cc66;">&#40;</span>data_sum_index<span style="color: #66cc66;">,</span> data_sum<span style="color: #66cc66;">&#41;</span>
+<span style="color: #66cc66;">&#41;</span> ENGINE<span style="color: #66cc66;">=</span>MyISAM <span style="color: #993333; font-weight: bold;">DEFAULT</span> CHARSET<span style="color: #66cc66;">=</span>utf8 <span style="color: #993333; font-weight: bold;">AUTO_INCREMENT</span><span style="color: #66cc66;">=</span><span style="color: #cc66cc;">1</span>;</pre></td></tr></table></div>
+
+<p>Pora stworzyć funkcję, która przeliczy nam nowy, krótszy odcisk palca na podstawie poprzedniego:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">FUNCTION</span> TestIndexChecksum<span style="color: #66cc66;">&#40;</span>sSum <span style="color: #993333; font-weight: bold;">VARCHAR</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">32</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">RETURNS</span> TINYINT
+<span style="color: #993333; font-weight: bold;">BEGIN</span>
+&nbsp;
+  <span style="color: #993333; font-weight: bold;">DECLARE</span> sSumPart <span style="color: #993333; font-weight: bold;">VARCHAR</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#41;</span>;
+  <span style="color: #993333; font-weight: bold;">DECLARE</span> iSumPart TINYINT;
+  <span style="color: #993333; font-weight: bold;">DECLARE</span> iSum <span style="color: #993333; font-weight: bold;">SMALLINT</span> <span style="color: #993333; font-weight: bold;">DEFAULT</span> <span style="color: #cc66cc;">0</span>;
+  <span style="color: #993333; font-weight: bold;">DECLARE</span> i <span style="color: #993333; font-weight: bold;">INT</span>;
+&nbsp;
+  <span style="color: #993333; font-weight: bold;">IF</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">SELECT</span> sSum <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">REGEXP</span> <span style="color: #ff0000;">'^([a-z0-9]){32}$'</span><span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">THEN</span> <span style="color: #993333; font-weight: bold;">RETURN</span> <span style="color: #cc66cc;">0</span>; <span style="color: #993333; font-weight: bold;">END</span> <span style="color: #993333; font-weight: bold;">IF</span>;
+&nbsp;
+  <span style="color: #993333; font-weight: bold;">SET</span> i <span style="color: #66cc66;">=</span> <span style="color: #cc66cc;">1</span>;
+&nbsp;
+  WHILE i &amp;lt;<span style="color: #66cc66;">=</span> <span style="color: #993333; font-weight: bold;">LENGTH</span><span style="color: #66cc66;">&#40;</span>sSum<span style="color: #66cc66;">&#41;</span> DO
+    <span style="color: #993333; font-weight: bold;">SET</span> sSumPart <span style="color: #66cc66;">=</span> SUBSTR<span style="color: #66cc66;">&#40;</span>sSum<span style="color: #66cc66;">,</span> i<span style="color: #66cc66;">,</span> <span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#41;</span>;
+    <span style="color: #993333; font-weight: bold;">SET</span> iSumPart <span style="color: #66cc66;">=</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">SELECT</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">CASE</span> <span style="color: #993333; font-weight: bold;">WHEN</span> sSumPart <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">'a'</span> <span style="color: #993333; font-weight: bold;">THEN</span> <span style="color: #cc66cc;">10</span> <span style="color: #993333; font-weight: bold;">WHEN</span> sSumPart <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">'b'</span> <span style="color: #993333; font-weight: bold;">THEN</span> <span style="color: #cc66cc;">11</span> <span style="color: #993333; font-weight: bold;">WHEN</span> sSumPart <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">'c'</span> <span style="color: #993333; font-weight: bold;">THEN</span> <span style="color: #cc66cc;">12</span> <span style="color: #993333; font-weight: bold;">WHEN</span> sSumPart <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">'d'</span> <span style="color: #993333; font-weight: bold;">THEN</span> <span style="color: #cc66cc;">13</span> <span style="color: #993333; font-weight: bold;">WHEN</span> sSumPart <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">'e'</span> <span style="color: #993333; font-weight: bold;">THEN</span> <span style="color: #cc66cc;">14</span> <span style="color: #993333; font-weight: bold;">WHEN</span> sSumPart <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">'f'</span> <span style="color: #993333; font-weight: bold;">THEN</span> <span style="color: #cc66cc;">15</span> <span style="color: #993333; font-weight: bold;">ELSE</span> <span style="color: #cc66cc;">0</span> <span style="color: #993333; font-weight: bold;">END</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+    <span style="color: #993333; font-weight: bold;">IF</span> iSumPart <span style="color: #66cc66;">=</span> <span style="color: #cc66cc;">0</span> <span style="color: #993333; font-weight: bold;">THEN</span>
+      <span style="color: #993333; font-weight: bold;">SET</span> iSumPart <span style="color: #66cc66;">=</span> sSumPart;
+    <span style="color: #993333; font-weight: bold;">END</span> <span style="color: #993333; font-weight: bold;">IF</span>;
+&nbsp;
+    <span style="color: #993333; font-weight: bold;">SET</span> iSum <span style="color: #66cc66;">=</span> iSum <span style="color: #66cc66;">+</span> iSumPart;
+    <span style="color: #993333; font-weight: bold;">SET</span> i <span style="color: #66cc66;">=</span> i <span style="color: #66cc66;">+</span> <span style="color: #cc66cc;">1</span>;
+  <span style="color: #993333; font-weight: bold;">END</span> WHILE;
+&nbsp;
+  <span style="color: #993333; font-weight: bold;">RETURN</span> iSum <span style="color: #66cc66;">/</span> <span style="color: #cc66cc;">2</span>;
+<span style="color: #993333; font-weight: bold;">END</span>;</pre></td></tr></table></div>
+
+<p>Aby przeprowadzać testy, stwórzmy sobie procedurę, która wstawi nam N losowo, jakkolwiek wypełnionych rekordów do bazy danych:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">PROCEDURE</span> TestIndexesPrepareTest<span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">IN</span> i <span style="color: #993333; font-weight: bold;">INT</span><span style="color: #66cc66;">&#41;</span>
+<span style="color: #993333; font-weight: bold;">BEGIN</span>
+  <span style="color: #993333; font-weight: bold;">TRUNCATE</span> <span style="color: #993333; font-weight: bold;">TABLE</span> test_md5_index;
+&nbsp;
+  WHILE i &amp;gt; <span style="color: #cc66cc;">0</span> DO
+&nbsp;
+    <span style="color: #993333; font-weight: bold;">INSERT</span> <span style="color: #993333; font-weight: bold;">INTO</span> test_md5_index <span style="color: #993333; font-weight: bold;">SET</span>
+      data_contents  <span style="color: #66cc66;">=</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">SELECT</span> <span style="color: #993333; font-weight: bold;">REPLACE</span><span style="color: #66cc66;">&#40;</span>CONCAT<span style="color: #66cc66;">&#40;</span>RAND<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span> <span style="color: #66cc66;">*</span> <span style="color: #cc66cc;">32</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">,</span> <span style="color: #ff0000;">&quot;.&quot;</span><span style="color: #66cc66;">,</span> <span style="color: #ff0000;">&quot;&quot;</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">,</span>
+      data_contents2 <span style="color: #66cc66;">=</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">SELECT</span> <span style="color: #993333; font-weight: bold;">REPLACE</span><span style="color: #66cc66;">&#40;</span>CONCAT<span style="color: #66cc66;">&#40;</span>RAND<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span> <span style="color: #66cc66;">*</span> <span style="color: #cc66cc;">32</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">,</span> <span style="color: #ff0000;">&quot;.&quot;</span><span style="color: #66cc66;">,</span> <span style="color: #ff0000;">&quot;&quot;</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">,</span>
+      data_contents3 <span style="color: #66cc66;">=</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">SELECT</span> <span style="color: #993333; font-weight: bold;">REPLACE</span><span style="color: #66cc66;">&#40;</span>CONCAT<span style="color: #66cc66;">&#40;</span>RAND<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span> <span style="color: #66cc66;">*</span> <span style="color: #cc66cc;">32</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">,</span> <span style="color: #ff0000;">&quot;.&quot;</span><span style="color: #66cc66;">,</span> <span style="color: #ff0000;">&quot;&quot;</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">,</span>
+      data_sum <span style="color: #66cc66;">=</span> CONCAT<span style="color: #66cc66;">&#40;</span>data_contents<span style="color: #66cc66;">,</span> data_contents2<span style="color: #66cc66;">,</span> data_contents3<span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">,</span>
+      data_sum_index <span style="color: #66cc66;">=</span> TestIndexChecksum<span style="color: #66cc66;">&#40;</span>data_sum<span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+    <span style="color: #993333; font-weight: bold;">SET</span> i <span style="color: #66cc66;">=</span> i <span style="color: #66cc66;">-</span> <span style="color: #cc66cc;">1</span>;
+  <span style="color: #993333; font-weight: bold;">END</span> WHILE;
+<span style="color: #993333; font-weight: bold;">END</span>;</pre></td></tr></table></div>
+
+<p>Po wykonaniu <code>CALL TestIndexesPrepareTest(100000)</code> mamy przygotowane małe środowisko testowe.</p>
+<p>Przygotujmy kilka zapytań do bazy danych, wybieramy losowy rekord, na którym będziemy testowali wyniki. Wykonujemy zapytanie z ręcznie wpisaną wartością warunku wybranego rekordu, sprawdźmy, jak szybko zostanie odnaleziony:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">SELECT</span> <span style="color: #66cc66;">*</span> <span style="color: #993333; font-weight: bold;">FROM</span> test_md5_index <span style="color: #993333; font-weight: bold;">WHERE</span> data_sum <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">&quot;24045771412594250684228176888212&quot;</span>;</pre></td></tr></table></div>
+
+<p><em>Average: ~0.0506 sec</em></p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">SELECT</span> <span style="color: #66cc66;">*</span> <span style="color: #993333; font-weight: bold;">FROM</span> test_md5_index <span style="color: #993333; font-weight: bold;">WHERE</span> data_sum_index <span style="color: #66cc66;">=</span> <span style="color: #cc66cc;">68</span> <span style="color: #993333; font-weight: bold;">AND</span> data_sum <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">&quot;24045771412594250684228176888212&quot;</span>;</pre></td></tr></table></div>
+
+<p><em>Average: ~0.0004 sec </em>(<strong>UWAGA!</strong> Specjalnie w warunku nie użyłem zwróconej warości funkcji, tylko dałem ją na sztywno, ręcznie wpisaną &#8211; funkcja by była wykonywana dla każdego porównania rekordu z osobna!).</p>
+<p>Nasze zapytanie działa znacznie szybciej (~120 razy dla 100k rekordów) kosztem niewielkiej pamięci &#8211; po 1 bajcie do rekordu oraz po 1 bajcie do jego indeksu.</p>
+<p>Zapewne istnieją szybkie silniki indeksowania danych, natomiast, gdy jesteśmy skazani np. na InnoDB z założeń technicznych &#8211; nie oznacza, że się nie da.</p>
+<p>Mam nadzieję, że komuś się przyda.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/optymalizacja-zapytan-mysql/#comments" thr:count="11"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/optymalizacja-zapytan-mysql/feed/atom/" thr:count="11"/>
+		<thr:total>11</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[MySQL tags]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/mysql-tags/" />
+		<id>http://athlan.pl/?p=635</id>
+		<updated>2011-01-10T12:20:04Z</updated>
+		<published>2011-01-09T23:36:37Z</published>
+		<category scheme="http://athlan.pl" term="Databases" /><category scheme="http://athlan.pl" term="Internet" /><category scheme="http://athlan.pl" term="Optymalizacja" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Publikacje" /><category scheme="http://athlan.pl" term="Solutions" /><category scheme="http://athlan.pl" term="SQL" /><category scheme="http://athlan.pl" term="foregin key" /><category scheme="http://athlan.pl" term="index" /><category scheme="http://athlan.pl" term="mysql" /><category scheme="http://athlan.pl" term="optymalizacja" /><category scheme="http://athlan.pl" term="tagi" /><category scheme="http://athlan.pl" term="tags" /><category scheme="http://athlan.pl" term="trigger" />		<summary type="html"><![CDATA[We wpisie Chmura tagów w PHP, w którym został przedstawiony problem budowy chmury tagów zapisałem przykładowe zapytanie prezentujące przykładowe dane dla klasy, które dosłownie zabija bazę danych zliczając za każdym razem ilość występowań tagów. Dostając feedbacki, zauważyłem, że problem ten jest bagatelizowany przez wiele osób. Spróbujmy zbudować bardziej optymalne rozwiązanie zarządzania strukturą danych w taki sposób, aby [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/mysql-tags/"><![CDATA[<p>We wpisie <a href="/chmura-tagow-tagcloud-php/">Chmura tagów w PHP</a>, w którym został przedstawiony problem budowy chmury tagów zapisałem <span style="text-decoration: underline;">przykładowe</span> zapytanie prezentujące <span style="text-decoration: underline;">przykładowe</span> dane dla klasy, które dosłownie zabija bazę danych zliczając za każdym razem ilość występowań tagów. Dostając feedbacki, zauważyłem, że problem ten jest bagatelizowany przez wiele osób. Spróbujmy zbudować <strong>bardziej optymalne rozwiązanie</strong> zarządzania strukturą danych w taki sposób, aby dane wyciągać bardzo bezboleśnie.</p>
+<p>Zbudujmy przykładową strukturę bazy danych tagów, do której będziemy przypinać różne rzeczy &#8211; newsy, artykuły, galerie zdjęć, zdjęcia, cokolwiek.</p>
+<p>Najprostsza tabela <strong>db_tags</strong> o polach:</p>
+<ul>
+<li><strong>tag_id</strong>, UNSIGNED, aby zwiększyć zakres INT &#8211; wartości ujemne nie są nam porzebne. Oczywiście primary key oraz auto increment.</li>
+<li><strong>tag_name</strong>, chociażby varchar(255)</li>
+<li><strong>tag_count</strong>, UNSIGNED, INT, ponownie bez znaku, aby zwiększyć zakres, wartości ujemne są nam niepotrzebne. Tutaj będziemy przechowywać liczbę reprezentującą, ile razy użyto tagu do oznaczenia dowolnego zestawu informacji.</li>
+</ul>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">TABLE</span> db_tags <span style="color: #66cc66;">&#40;</span>
+  tag_id <span style="color: #993333; font-weight: bold;">INT</span> <span style="color: #993333; font-weight: bold;">UNSIGNED</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span> <span style="color: #993333; font-weight: bold;">AUTO_INCREMENT</span> <span style="color: #993333; font-weight: bold;">PRIMARY</span> <span style="color: #993333; font-weight: bold;">KEY</span> <span style="color: #66cc66;">,</span>
+  tag_name <span style="color: #993333; font-weight: bold;">VARCHAR</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">255</span><span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span> <span style="color: #66cc66;">,</span>
+  tag_count <span style="color: #993333; font-weight: bold;">INT</span> <span style="color: #993333; font-weight: bold;">UNSIGNED</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span>
+<span style="color: #66cc66;">&#41;</span> ENGINE <span style="color: #66cc66;">=</span> INNODB;</pre></td></tr></table></div>
+
+<p>Zastanówmy się, po czym będziemy sortować tagi. <strong>Warto założyć klucz na pole tag_count</strong>, znacznie przyspieszy późniejsze sortowanie wyników po najpopularniejszych tagach. Jeżeli chcemy sortować po liczbie występowań tagu oraz nazwie (aby chmura była alfabetycznie), warto założyć wspólny klucz na tag_name oraz tag_count. Osobiście sortowanie alfabetyczne zostawiam implementacji klasie tagów dla <a href="http://php.net/ksort">ksort()</a>, bowiem zapytanie wyciągające tagi jest obarczone limitem, zatem wspólny klucz w bazie danych nie jest mi potrzebny &#8211; mniej danych w indeksach.</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">ALTER</span> <span style="color: #993333; font-weight: bold;">TABLE</span> db_tags <span style="color: #993333; font-weight: bold;">ADD</span> <span style="color: #993333; font-weight: bold;">INDEX</span> <span style="color: #66cc66;">&#40;</span>tag_count<span style="color: #66cc66;">&#41;</span>;</pre></td></tr></table></div>
+
+<p>Tworzymy dowolną strukturę danych, która będzie podpinała się do naszych tagów. Pamiętajmy, że do tagów może podpinać się (a przynajmniej powinno, zależy od założeń początkowych projektu) wiele struktur jednocześnie. Wybrałem najbardziej pospolite &#8211; newsy w tabeli <strong>db_news</strong>.</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">TABLE</span> db_news <span style="color: #66cc66;">&#40;</span>
+  news_id <span style="color: #993333; font-weight: bold;">INT</span> <span style="color: #993333; font-weight: bold;">UNSIGNED</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span> <span style="color: #993333; font-weight: bold;">AUTO_INCREMENT</span> <span style="color: #993333; font-weight: bold;">PRIMARY</span> <span style="color: #993333; font-weight: bold;">KEY</span><span style="color: #66cc66;">,</span>
+  news_title TEXT <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">,</span>
+  news_content TEXT <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span>
+<span style="color: #66cc66;">&#41;</span> ENGINE <span style="color: #66cc66;">=</span> INNODB;</pre></td></tr></table></div>
+
+<p>Pozostało nam stworzyć tabelę wiążącą nasze newsy z tagami (nie tagi z newsami). Tabelę nazwałem <strong>db_news_tags</strong>. Zawierać ona będzie tylko dwa pola przechowujące identyfikator newsa oraz przypisanego do niego tagu, zachowując typ danych wiążących, czyli INT UNSIGNED. Zakładam wspólny primary key dla obu pól.</p>
+<ul>
+<li><strong>handler_item</strong> &#8211; klucz ID newsa,</li>
+<li><strong>handler_node</strong> &#8211; klucz ID tagu.</li>
+</ul>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">TABLE</span> db_news_tags <span style="color: #66cc66;">&#40;</span>
+  handler_item <span style="color: #993333; font-weight: bold;">INT</span> <span style="color: #993333; font-weight: bold;">UNSIGNED</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">,</span>
+  handler_node <span style="color: #993333; font-weight: bold;">INT</span> <span style="color: #993333; font-weight: bold;">UNSIGNED</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">,</span>
+<span style="color: #993333; font-weight: bold;">PRIMARY</span> <span style="color: #993333; font-weight: bold;">KEY</span> <span style="color: #66cc66;">&#40;</span>handler_item<span style="color: #66cc66;">,</span> handler_node<span style="color: #66cc66;">&#41;</span>
+<span style="color: #66cc66;">&#41;</span> ENGINE <span style="color: #66cc66;">=</span> INNODB;</pre></td></tr></table></div>
+
+<p>Buduję relacyjną bazę danych. Gdy jakiś tag zostanie usunięty, bądź gdy jakiś news zostanie usunięty, automatycznie powinien zniknąć wpis z tabeli <strong>db_news_tags</strong>, zatem używamy kluczy obcych:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">ALTER</span> <span style="color: #993333; font-weight: bold;">TABLE</span> db_news_tags <span style="color: #993333; font-weight: bold;">ADD</span> <span style="color: #993333; font-weight: bold;">FOREIGN</span> <span style="color: #993333; font-weight: bold;">KEY</span> <span style="color: #66cc66;">&#40;</span>handler_item<span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">REFERENCES</span> db_news <span style="color: #66cc66;">&#40;</span>news_id<span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">ON</span> <span style="color: #993333; font-weight: bold;">DELETE</span> CASCADE;
+<span style="color: #993333; font-weight: bold;">ALTER</span> <span style="color: #993333; font-weight: bold;">TABLE</span> db_news_tags <span style="color: #993333; font-weight: bold;">ADD</span> <span style="color: #993333; font-weight: bold;">FOREIGN</span> <span style="color: #993333; font-weight: bold;">KEY</span> <span style="color: #66cc66;">&#40;</span>handler_node<span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">REFERENCES</span> db_tags <span style="color: #66cc66;">&#40;</span>tag_id<span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">ON</span> <span style="color: #993333; font-weight: bold;">DELETE</span> CASCADE;</pre></td></tr></table></div>
+
+<p>Tak zaprojektowaną strukturę danych mogę spokojnie używać do przechowywania danych. Pozostaje kwestia obliczania ilości występowań tagów. Istnieją co najmniej dwie szkoły.</p>
+<ol>
+<li>Każda zmiana danych w <strong>db_news_handler</strong> wywołuje procedurę liczącą tagi. Trzeba mieć na uwadze, że tagi są przeliczane <strong>od początku</strong> mielenie bazy, ale de facto proces odbywa się po kluczach. Zaletą rozwiązania jest to, że przy bardzo rozbudowanych strukturach (np. liczymy tylko aktywne i widoczne tagi) procedura uwspólnia nam warunki podliczania, używając jej w wielu miejscach nie musimy się martwić o redefiniowanie triggerów.</li>
+<li>Dla przedstawionego przykładu w tym poście wystarczy inkrementacja licznika przy dodaniu i dekrementacja przy usunięciu tagu. W większości przypadków właśnie takiego rozwiązania powinno się używać.</li>
+</ol>
+<p><strong>Luźny komentarz techniczny (problems, tips &#038; tricks):</strong> Aby ominąć problemy wynikłe z założenia w punkcie pierwszym, równie dobrze możemy napisać procedury, które inkrementują/dekrementują liczbę tagów w zależności od warunków (np. tylko wtedy, kiedy tag jest aktywny i widoczny w serwisie). Nikt nie powiedział, że procedury muszą liczyć wszystko od początku możemy się na takie rozwiązanie zgodzić, rezygnujemy natomiast z synchronizacji licznika podczas zmiany warunków, wówczas podczas każdej zmiany warunków, trzeba przekręcić licznik od początku, zliczając wszystkie rekordy wg. ustalonych warunków ręcznie. Triggera należałoby również umieścić w UPDATE (zmiana stanu tagu, np. z niewidocznego na widoczny, z aktywnego na nieaktywny). I to jest najrozsądniejsze rozwiązanie.</p>
+<p>W naszym przypadku ograniczymy się do dwóch triggerów, które będą trzymały rękę na pulsie w momencie przypisania tagu do struktury INSERT oraz zerwaniu przypisania DELETE. Zatem:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">TRIGGER</span> NewsTagsCountInsert AFTER <span style="color: #993333; font-weight: bold;">INSERT</span> <span style="color: #993333; font-weight: bold;">ON</span> db_news_tags
+  <span style="color: #993333; font-weight: bold;">FOR</span> EACH <span style="color: #993333; font-weight: bold;">ROW</span> <span style="color: #993333; font-weight: bold;">BEGIN</span>
+    <span style="color: #993333; font-weight: bold;">UPDATE</span> db_tags <span style="color: #993333; font-weight: bold;">SET</span> tag_count <span style="color: #66cc66;">=</span> tag_count <span style="color: #66cc66;">+</span> <span style="color: #cc66cc;">1</span> <span style="color: #993333; font-weight: bold;">WHERE</span> tag_id <span style="color: #66cc66;">=</span> <span style="color: #993333; font-weight: bold;">NEW</span><span style="color: #66cc66;">.</span>handler_node;
+  <span style="color: #993333; font-weight: bold;">END</span>
+&nbsp;
+<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">TRIGGER</span> NewsTagsCountDelete AFTER <span style="color: #993333; font-weight: bold;">DELETE</span> <span style="color: #993333; font-weight: bold;">ON</span> db_news_tags
+  <span style="color: #993333; font-weight: bold;">FOR</span> EACH <span style="color: #993333; font-weight: bold;">ROW</span> <span style="color: #993333; font-weight: bold;">BEGIN</span>
+    <span style="color: #993333; font-weight: bold;">UPDATE</span> db_tags <span style="color: #993333; font-weight: bold;">SET</span> tag_count <span style="color: #66cc66;">=</span> tag_count <span style="color: #66cc66;">-</span> <span style="color: #cc66cc;">1</span> <span style="color: #993333; font-weight: bold;">WHERE</span> tag_id <span style="color: #66cc66;">=</span> <span style="color: #993333; font-weight: bold;">OLD</span><span style="color: #66cc66;">.</span>handler_node;
+  <span style="color: #993333; font-weight: bold;">END</span></pre></td></tr></table></div>
+
+<p><strong>Komentarz</strong>: bardziej eleganckim w większej strukturze danych byłoby wywołanie procedur inkrementujących i dekrementujących licznik &#8211; wówczas wykonywalibyśmy procedury (nie zapytania) w wielu strukturach wiązanych (nie tylko newsy, a video, ankiety, etc). Zmiana implementacji liczenia tagów byłaby wówczas wiele prostsza &#8211; zmienialibyśmy tylko procedurę, a nie każdy TRIGGER z osobna, zatem:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">PROCEDURE</span> TagsCountIncrement<span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">IN</span> iTagID <span style="color: #993333; font-weight: bold;">INT</span><span style="color: #66cc66;">&#41;</span>
+<span style="color: #993333; font-weight: bold;">BEGIN</span>
+  <span style="color: #993333; font-weight: bold;">UPDATE</span> db_tags <span style="color: #993333; font-weight: bold;">SET</span> tag_count <span style="color: #66cc66;">=</span> tag_count <span style="color: #66cc66;">+</span> <span style="color: #cc66cc;">1</span> <span style="color: #993333; font-weight: bold;">WHERE</span> tag_id <span style="color: #66cc66;">=</span> iTagID;
+<span style="color: #993333; font-weight: bold;">END</span>
+&nbsp;
+<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">PROCEDURE</span> TagsCountDecrement<span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">IN</span> iTagID <span style="color: #993333; font-weight: bold;">INT</span><span style="color: #66cc66;">&#41;</span>
+<span style="color: #993333; font-weight: bold;">BEGIN</span>
+  <span style="color: #993333; font-weight: bold;">UPDATE</span> db_tags <span style="color: #993333; font-weight: bold;">SET</span> tag_count <span style="color: #66cc66;">=</span> tag_count <span style="color: #66cc66;">-</span> <span style="color: #cc66cc;">1</span> <span style="color: #993333; font-weight: bold;">WHERE</span> tag_id <span style="color: #66cc66;">=</span> iTagID;
+<span style="color: #993333; font-weight: bold;">END</span>
+&nbsp;
+<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">TRIGGER</span> NewsTagsCountInsert AFTER <span style="color: #993333; font-weight: bold;">INSERT</span> <span style="color: #993333; font-weight: bold;">ON</span> db_news_tags
+  <span style="color: #993333; font-weight: bold;">FOR</span> EACH <span style="color: #993333; font-weight: bold;">ROW</span> <span style="color: #993333; font-weight: bold;">BEGIN</span>
+    <span style="color: #993333; font-weight: bold;">CALL</span> TagsCountIncrement<span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">NEW</span><span style="color: #66cc66;">.</span>handler_node<span style="color: #66cc66;">&#41;</span>;
+  <span style="color: #993333; font-weight: bold;">END</span>
+&nbsp;
+<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">TRIGGER</span> NewsTagsCountDelete AFTER <span style="color: #993333; font-weight: bold;">DELETE</span> <span style="color: #993333; font-weight: bold;">ON</span> db_news_tags
+  <span style="color: #993333; font-weight: bold;">FOR</span> EACH <span style="color: #993333; font-weight: bold;">ROW</span> <span style="color: #993333; font-weight: bold;">BEGIN</span>
+    <span style="color: #993333; font-weight: bold;">CALL</span> TagsCountDecrement<span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">OLD</span><span style="color: #66cc66;">.</span>handler_node<span style="color: #66cc66;">&#41;</span>;
+  <span style="color: #993333; font-weight: bold;">END</span></pre></td></tr></table></div>
+
+<p>Finalnie, z czystym sumieniem:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">SELECT</span> tag_name<span style="color: #66cc66;">,</span> tag_count <span style="color: #993333; font-weight: bold;">FROM</span> db_tags <span style="color: #993333; font-weight: bold;">ORDER</span> <span style="color: #993333; font-weight: bold;">BY</span> tag_count <span style="color: #993333; font-weight: bold;">LIMIT</span> <span style="color: #cc66cc;">0</span><span style="color: #66cc66;">,</span> <span style="color: #cc66cc;">50</span></pre></td></tr></table></div>
+
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/mysql-tags/#comments" thr:count="5"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/mysql-tags/feed/atom/" thr:count="5"/>
+		<thr:total>5</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[MySQL DELETE JOIN]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/mysql-delete-join/" />
+		<id>http://athlan.pl/?p=626</id>
+		<updated>2011-01-09T11:56:55Z</updated>
+		<published>2011-01-02T11:19:43Z</published>
+		<category scheme="http://athlan.pl" term="Databases" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Publikacje" /><category scheme="http://athlan.pl" term="Solutions" /><category scheme="http://athlan.pl" term="SQL" /><category scheme="http://athlan.pl" term="database" /><category scheme="http://athlan.pl" term="delete" /><category scheme="http://athlan.pl" term="inner join" /><category scheme="http://athlan.pl" term="join" /><category scheme="http://athlan.pl" term="mysql" />		<summary type="html"><![CDATA[Składowanie danych w kilku tabelach połączonych relacyjnie to bardzo dobry pomysł. Chyba najprostszym przykładem jest forum dyskusyjne: struktura oraz content postów mogą spokojnie być trzymane w osobnych tabelach. To samo tyczy się danych użytkowników. Rekordy rozbite na kilka tabel stają się mniej rozbudowane, o ile w ogóle występują - istnienie zawartości pola nie jest wtedy wymagane (użytkownik nie podał [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/mysql-delete-join/"><![CDATA[<p>Składowanie danych w kilku tabelach połączonych relacyjnie to bardzo dobry pomysł. Chyba najprostszym przykładem jest forum dyskusyjne: struktura oraz content postów mogą spokojnie być trzymane w osobnych tabelach. To samo tyczy się danych użytkowników. Rekordy rozbite na kilka tabel stają się mniej rozbudowane, o ile w ogóle występują - istnienie zawartości pola nie jest wtedy wymagane (użytkownik nie podał danych = nie ma rekordu).</p>
+<p>Zaznaczając <strong>JOIN</strong>&#8216;ujemy tabele w zależności od potrzeb, co zdarza się bardzo często. O <a href="http://athlan.pl/mysql-update-join/"><strong>UPDATE JOIN</strong></a> już wspominałem, też bardzo wygodna operacja, natomiast, co w przypadku, gdy musimy usunąć rekord uzależniony od wartości pola w innej tabeli? Sprawa jest banalnie prosta.</p>
+<p>Na początek kilka technicznych uwag, na które łatwo można się nadziać:</p>
+<ul>
+<li>Najczęściej będziemy mieli <span style="text-decoration: underline;">przypadek, w którym wartość pola musi być znana</span> = rekord w tabeli obok musi istnieć. Nie zapomnijmy o pełnym złączeniu tabel <em><strong>INNER JOIN</strong></em>.</li>
+<li>Gdy czyścimy śmieci w bazie danych, chcemy, <span style="text-decoration: underline;">aby wartość pola była konkretna lub niezdefiniowana</span>, tabele możemy złączyć lewostronnie <em><strong>LEFT JOIN</strong></em>.</li>
+<li>Składnia <strong>DELETE FROM</strong> jest bardzo podobna do <strong>SELECT</strong>. Zaznaczamy <em>alias_tabeli.*</em> jako wybór rekordu do usunięcia. Możemy usuwać rekordy z kilku tabel oddzielając zaznaczenia przecinkami. <del>Przy JOIN&#8217;ach wymagane jest zdefiniowanie aliasów i sprecyzowanie, co chcemy usunąć <em>alias_tabeli.*</em></del> (edit: nie jest wymagane definiowanie aliasów, przykłady niżej)</li>
+</ul>
+<p>Przykłady.</p>
+<p>Dane userów mam składowane w dwóch tabelach &#8211; w jednej podstawowe dane (id, name, pass, pass_salt, mail, status_active), w kolejnej dane (data [jako handler user -&gt; user_data], data_* [* - jakieśdane]). Chcę usunąć wszystkich użytkowników, którzy zarejestrowali się przed 48-godzinami i nie aktywowali swoich kont, aby zwolnić unikalne nazwy użytkowników i adresy email. Jednym kryterium jest <em>user_status_active</em> z tabeli <em>users</em>, kolejnym jest data <em>user_data_join</em> z tabeli <em>users_data</em>. Jako, że mam założony kaskadowy foregin key na pole <em>user_data</em> w tabeli <em>users_data</em>, przy usunięciu rekordu z tabeli <em>users</em> pozbędę się również jego danych, o co dbać nie muszę przy wypisywaniu <em>alias_tabeli.*</em>. W przypadku, kiedy nie miałbym założonego foregin key, musiałbym obsłużyć usunięcie rekordu z <em>users_data</em> wypisując po przecinku tabelę. Zatem:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">DELETE</span> item<span style="color: #66cc66;">.*</span> <span style="color: #993333; font-weight: bold;">FROM</span> <span style="color: #ff0000;">`cms_members`</span> <span style="color: #993333; font-weight: bold;">AS</span> <span style="color: #ff0000;">`item`</span>
+<span style="color: #993333; font-weight: bold;">INNER</span> <span style="color: #993333; font-weight: bold;">JOIN</span> <span style="color: #ff0000;">`cms_members_data`</span> <span style="color: #993333; font-weight: bold;">AS</span> <span style="color: #ff0000;">`item_data`</span> <span style="color: #993333; font-weight: bold;">ON</span> <span style="color: #66cc66;">&#40;</span>item<span style="color: #66cc66;">.</span>user_id <span style="color: #66cc66;">=</span> item_data<span style="color: #66cc66;">.</span>user_data<span style="color: #66cc66;">&#41;</span>
+<span style="color: #993333; font-weight: bold;">WHERE</span> item<span style="color: #66cc66;">.</span>user_state_active <span style="color: #66cc66;">=</span> <span style="color: #cc66cc;">0</span> <span style="color: #993333; font-weight: bold;">AND</span> item_data<span style="color: #66cc66;">.</span>user_data_join <span style="color: #66cc66;">&lt;</span> NOW<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span></pre></td></tr></table></div>
+
+<p>~Tiraeth przesłał rozwiązanie beż użycia aliasów i słowa kluczowego JOIN, odwołujemy się po nazwie tabeli:
+</pre>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">DELETE</span> cms_members<span style="color: #66cc66;">.*</span> <span style="color: #993333; font-weight: bold;">FROM</span> <span style="color: #ff0000;">`cms_members`</span><span style="color: #66cc66;">,</span> <span style="color: #ff0000;">`cms_members_data`</span>
+<span style="color: #993333; font-weight: bold;">WHERE</span> cms_members<span style="color: #66cc66;">.</span>user_id <span style="color: #66cc66;">=</span> cms_members_data<span style="color: #66cc66;">.</span>user_data <span style="color: #993333; font-weight: bold;">AND</span> user_state_active <span style="color: #66cc66;">=</span> <span style="color: #cc66cc;">0</span> <span style="color: #993333; font-weight: bold;">AND</span> user_data_join <span style="color: #66cc66;">&lt;</span> NOW<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span></pre></td></tr></table></div>
+
+<p>Podzapytanie oraz INNER JOIN generuje nam iloczyn kartezjański:</p>
+<blockquote><p>INNER JOIN and , (comma) are semantically equivalent in the absence of a join condition: both produce a Cartesian product between the specified tables (that is, each and every row in the first table is joined to each and every row in the second table).</p></blockquote>
+<p>Mam nadzieję, że komuś się przyda.</pre>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/mysql-delete-join/#comments" thr:count="4"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/mysql-delete-join/feed/atom/" thr:count="4"/>
+		<thr:total>4</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[[meta]dane dla Facebooka]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/metdane-dla-facebooka/" />
+		<id>http://athlan.pl/?p=507</id>
+		<updated>2011-05-28T13:18:52Z</updated>
+		<published>2010-12-06T15:17:18Z</published>
+		<category scheme="http://athlan.pl" term="Internet" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Przemyślenia" /><category scheme="http://athlan.pl" term="Usablity" /><category scheme="http://athlan.pl" term="XHTML" />		<summary type="html"><![CDATA[Ostatnimi czasy tworząc projekty coraz częściej zwracam uwagę na usability, poprawiając przy tym grafików. Dziś krótko, bo o tym, jak dostosować nagłówki &#60;meta&#62;, aby jak najlepiej były przeklejane do okienka udostępniania linków na Facebook&#8217;u. Czasem cennymi danymi są te, które widzi Google oraz użytkownik (meta description i bezpośrednio w pasku przeglądarki title), czasem zależy nam na dostosowaniu [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/metdane-dla-facebooka/"><![CDATA[<p>Ostatnimi czasy tworząc projekty coraz częściej zwracam uwagę na <em>usability</em>, poprawiając przy tym grafików. Dziś krótko, bo o tym, jak dostosować nagłówki &lt;meta&gt;, aby jak najlepiej były przeklejane do okienka udostępniania linków na Facebook&#8217;u.</p>
+<p>Czasem cennymi danymi są te, które widzi Google oraz użytkownik (meta description i bezpośrednio w pasku przeglądarki title), czasem zależy nam na dostosowaniu prezentacji danych agregatorów, w naszym przypadku Facebook&#8217;a, aby użytkownik wklejając linka nie musiał się dodatkowo w nic angażować.</p>
+<ol>
+<li><strong>Wykryj, czy odwiedza Cię Facebook</strong>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="php" style="font-family:monospace;"><span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">preg_match</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'/^facebookexternalhit/'</span><span style="color: #339933;">,</span> <span style="color: #000088;">$_SERVER</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">'HTTP_USER_AGENT'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span></pre></td></tr></table></div>
+
+</li>
+<li>Dostosuj swój <em>meta description</em>. Pamiętaj, że Facebook ucina spore części tekstów, dlatego sprecyzuj najbardziej chwytliwe fragmenty contentu, które mogą przyciągnąć użytkownika. Dodatkowo możesz zmodyfikować <em>title</em> dodając do niego dziwne znaczki (encje), które na pewno przyciągną wzrok.</li>
+<li>Przygotuj odpowiedni obraz o odpowiedniej rozdzielczości, a następnie zaserwuj go w tagu:<br />
+<code>&lt;link rel="image_src" href=" ... " /&gt;</code><br />
+Gdy tego nie zrobisz, użytkownik, który przekleja linka będzie sam musiał zdecydować o obrazie, który zostanie mu zaproponowany z puli dostępnych na stronie. Ta praktyka na szczęście jest często wykorzystywana przez programistów, wydaje się być trywialna.</li>
+<li>Jeżeli chcesz wyeksponować ramkę Facebook&#8217;a na swoją stronę www, ustaw transparentność na <em>iframe</em>. Wbuduj ją w diva i nie zapominaj o możliwościach <em>CSS</em> takich jak <em>position</em>: absolute; <em>position</em>: relative; <em>top</em>: -1px; <em>left</em>: -1px; <em>overflow</em>: hidden; aby ukryć czasem kłopotliwe obramowanie <em>iframe&#8217;a</em>.</li>
+</ol>
+<p>Efekt? Sprawdź sam na <a href="http://www.nowiny365.pl">Nowiny365.pl</a>.</p>
+<p style="border: 3px solid red; padding: 10px;">Przeczytaj również o <a href="http://developers.facebook.com/docs/opengraph">OpenGraph</a>.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/metdane-dla-facebooka/#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/metdane-dla-facebooka/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[&#8220;Rekurencja&#8221; w funkcjach/procedurach MySQL]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/rekurencja-mysql-funkcje-procedury/" />
+		<id>http://athlan.pl/?p=500</id>
+		<updated>2010-11-22T12:02:57Z</updated>
+		<published>2010-11-22T12:00:30Z</published>
+		<category scheme="http://athlan.pl" term="Databases" /><category scheme="http://athlan.pl" term="Internet" /><category scheme="http://athlan.pl" term="Optymalizacja" /><category scheme="http://athlan.pl" term="Planeta" /><category scheme="http://athlan.pl" term="Publikacje" /><category scheme="http://athlan.pl" term="baza danych" /><category scheme="http://athlan.pl" term="funkcje" /><category scheme="http://athlan.pl" term="mysql" /><category scheme="http://athlan.pl" term="procedury" /><category scheme="http://athlan.pl" term="publikacje" /><category scheme="http://athlan.pl" term="rekurencja" />		<summary type="html"><![CDATA[Odzwyczajony od blogowania, zaabsorbowany przez niekorzystnego dla planet i blogosfery stanu rzeczy Social Media, postanowiłem wrzucić kolejny wpis, w podzięce za porady uzyskane z blogów kolegów z branży. Ostatnio moim zadaniem było zaprojektowanie struktury tabel bazy danych, która wraz z drzewem z zagłębieniem kategorii, ma przechowywać dane na temat cen za ogłoszenia publikowane w tych kategoriach. Założenia [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/rekurencja-mysql-funkcje-procedury/"><![CDATA[<p>Odzwyczajony od blogowania, zaabsorbowany przez niekorzystnego dla planet i blogosfery stanu rzeczy Social Media, postanowiłem wrzucić kolejny wpis, w podzięce za porady uzyskane z blogów kolegów z branży. Ostatnio moim zadaniem było zaprojektowanie struktury tabel bazy danych, która wraz z drzewem z zagłębieniem kategorii, ma przechowywać dane na temat cen za ogłoszenia publikowane w tych kategoriach.</p>
+<p>Założenia wstępne wyglądały następująco:</p>
+<ol>
+<li><strong>Każda kategoria może mieć rodzica, ale nie musi.</strong><br />
+Jak komu wygodnie, postanowiłem wybrać rozwiązanie z polem <em>category_parent</em> int(11) UNSIGNED, domyślnie NULL (bez rodzica).</li>
+<li><strong>Kategorie mogą mieć ustaloną cenę za opublikowanie ogłoszenia, ale nie muszą.</strong><br />
+Dodałem pole <em>category_data_price</em> float(6,2) UNSIGNED, domyślnie NULL (niezdefiniowana).</li>
+<li><strong>Kategorie</strong>, które nie mają zdefiniowanej ceny, a mają rodzica, <strong>przejmują cenę rodzica w zagłębieniu do nieskończoności</strong>. W przypadku, kiedy cena jest niezdefiniowana również dla rodziców, cena stanowi NULL.</li>
+</ol>
+<p>Potrzebne mi było zapytanie, które zwróci mi zwyczajnie listę wszystkich kategorii wraz z cenami, uwzględniając zagłębienia, w jakich dana kategoria się znajduje. Podejścia składowania cen są dwa:</p>
+<ol>
+<li><strong>Można zapisywać</strong> tylko <strong>cenę kategorii</strong>, która jest dla niej zdefiniowana, <strong>a przy wyciąganiu danych rekurencyjnie sprawdzać procedurą/funkcją</strong> cenę rodzica, jeżeli jest niezdefiniowana. I tak w kółko do przypadku, gdy któraś z kategorii będzie już miała zdefiniowaną cenę, bądź nie będzie się już gdzie zagłębić (kategoria nie ma rodzica).</li>
+<li><strong>Można zapisać dwie ceny dodając pole dodatkowe</strong>, które przy będzie przechowywało wartość ceny, biorąc ją przy sprawdzaniu cen tylko przy zapisie rekordu do bazy danych.</li>
+</ol>
+<p>Sposób drugi wydaje się być bardziej rozsądny w przypadku większej ilości zapytań podejmujących dane z bazy. Pierwszy odwrotnie &#8211; częściej wpisujemy coś do bazy. Z początku wybrałem pierwszy sposób, przy założeniu, że ceny będą generowane tylko w panelu administracyjnym, zatem zapytanie nie będzie wykonywane często. Niestety, moje myślenie jest bardziej abstrakcyjne, nastawione na elastyczność rozwiązań, w przyszłości cel istnienia bazy może się zmienić.</p>
+<p>Tak czy siak, dla obu rozwiązań, trzeba stworzyć procedurę sprawdzającą ceny po rodzicach. Wygląda mniej więcej tak:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="sql" style="font-family:monospace;"><span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">FUNCTION</span> AnnouncementsCategoriesGetPrice<span style="color: #66cc66;">&#40;</span>iCategoryId <span style="color: #993333; font-weight: bold;">INT</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">11</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span> <span style="color: #993333; font-weight: bold;">RETURNS</span> <span style="color: #993333; font-weight: bold;">FLOAT</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">6</span><span style="color: #66cc66;">,</span><span style="color: #cc66cc;">2</span><span style="color: #66cc66;">&#41;</span>
+<span style="color: #993333; font-weight: bold;">BEGIN</span>
+<span style="color: #993333; font-weight: bold;">DECLARE</span> iResult <span style="color: #993333; font-weight: bold;">FLOAT</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">6</span><span style="color: #66cc66;">,</span><span style="color: #cc66cc;">2</span><span style="color: #66cc66;">&#41;</span>;
+<span style="color: #993333; font-weight: bold;">DECLARE</span> iPointer <span style="color: #993333; font-weight: bold;">INT</span><span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">11</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+<span style="color: #993333; font-weight: bold;">SET</span> iPointer <span style="color: #66cc66;">=</span> iCategoryId;
+<span style="color: #993333; font-weight: bold;">SET</span> iResult  <span style="color: #66cc66;">=</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">SELECT</span> category_data_price <span style="color: #993333; font-weight: bold;">FROM</span> cms_announcements_categories <span style="color: #993333; font-weight: bold;">WHERE</span> category_id <span style="color: #66cc66;">=</span> iPointer<span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+WHILE <span style="color: #66cc66;">&#40;</span>iResult <span style="color: #993333; font-weight: bold;">IS</span> <span style="color: #993333; font-weight: bold;">NULL</span> <span style="color: #993333; font-weight: bold;">AND</span> iPointer <span style="color: #993333; font-weight: bold;">IS</span> <span style="color: #993333; font-weight: bold;">NOT</span> <span style="color: #993333; font-weight: bold;">NULL</span><span style="color: #66cc66;">&#41;</span> DO
+<span style="color: #993333; font-weight: bold;">SET</span> iResult  <span style="color: #66cc66;">=</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">SELECT</span> category_data_price <span style="color: #993333; font-weight: bold;">FROM</span> cms_announcements_categories <span style="color: #993333; font-weight: bold;">WHERE</span> category_id <span style="color: #66cc66;">=</span> iPointer<span style="color: #66cc66;">&#41;</span>;
+<span style="color: #993333; font-weight: bold;">SET</span> iPointer <span style="color: #66cc66;">=</span> <span style="color: #66cc66;">&#40;</span><span style="color: #993333; font-weight: bold;">SELECT</span> category_parent <span style="color: #993333; font-weight: bold;">FROM</span> cms_announcements_categories <span style="color: #993333; font-weight: bold;">WHERE</span> category_id <span style="color: #66cc66;">=</span> iPointer<span style="color: #66cc66;">&#41;</span>;
+<span style="color: #993333; font-weight: bold;">END</span> WHILE;
+&nbsp;
+<span style="color: #993333; font-weight: bold;">RETURN</span> iResult;
+<span style="color: #993333; font-weight: bold;">END</span></pre></td></tr></table></div>
+
+<p>Stosować ją można dla SELECT&#8217;u kategorii lub do pozyskania wartości pola tymczasowego przy zapisie do bazy.</p>
+<p>Mam nadzieję, że komuś się przyda.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/rekurencja-mysql-funkcje-procedury/#comments" thr:count="4"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/rekurencja-mysql-funkcje-procedury/feed/atom/" thr:count="4"/>
+		<thr:total>4</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>Athlan</name>
+						<uri>http://www.vgroup.pl</uri>
+					</author>
+		<title type="html"><![CDATA[Zmiana operatora komórkowego bez straty numeru]]></title>
+		<link rel="alternate" type="text/html" href="http://athlan.pl/zmiana-operatora-bez-straty-numeru/" />
+		<id>http://athlan.pl/?p=471</id>
+		<updated>2010-09-16T21:58:38Z</updated>
+		<published>2010-09-16T21:52:56Z</published>
+		<category scheme="http://athlan.pl" term="Private" /><category scheme="http://athlan.pl" term="Przemyślenia" /><category scheme="http://athlan.pl" term="Real live" /><category scheme="http://athlan.pl" term="Uncategorized" />		<summary type="html"><![CDATA[Podczas świadczenia usług abonamentowych podejmujemy się analizy konkurencji, bądź dostajemy bodźce od operatorów. Stara oferta może nam jak najbardziej odpowiadać, często konsultanci przed możliwością przedłużenia umowy proponują różnego rodzaju bonusy, czasem traktowanie abonenta to kpina. Zatem najczęściej wtedy jesteśmy szarpani na smyczy i zastanawiamy się nad zmianą dostawcy usług. Od jakiegoś czasu można przejść do [...]]]></summary>
+		<content type="html" xml:base="http://athlan.pl/zmiana-operatora-bez-straty-numeru/"><![CDATA[<p>Podczas świadczenia usług abonamentowych podejmujemy się analizy konkurencji, bądź dostajemy bodźce od operatorów. Stara oferta może nam jak najbardziej odpowiadać, często konsultanci przed możliwością przedłużenia umowy proponują różnego rodzaju bonusy, czasem traktowanie abonenta to kpina. Zatem najczęściej wtedy jesteśmy szarpani na smyczy i zastanawiamy się nad zmianą dostawcy usług. Od jakiegoś czasu można przejść do innego operatora sieci telefonii komórkowej, nie tracąc przy tym swojego numeru. Ważnym jest <em>przejść</em> do innego operatora, a nie <em>odstąpić od umowy</em> u operatora macierzystego. Miałem okazję przechodzić ten proces, a że jestem pedantem wypytałem o wszystkie szczegóły i sytuacje krytyczne, zatem podzielę się wiedzą, którą zgromadziłem na temat tej materii. Żeby nikomu się nie zdarzyło popełnić idiotycznego błędu. Potencjalne <span style="color: #ff0000;">błędy oznaczyłem na czerwono</span>, <strong>kroki pogrubiłem</strong>, a <span style="text-decoration: underline;">istotne rzeczy podkreśliłem</span>.</p>
+<p><strong>1. Rejestracja numeru telefonu</strong></p>
+<p>W momencie, gdy nie jesteśmy użytkownikami abonamentowymi lub tzw. mix, nie jesteśmy automatycznie właścicielami numeru telefonu. Karty pre-paid (na doładowania na czas nieokreślony) nie wiążą klienta w żaden sposób z operatorem &#8211; możemy taką kartę wyrzucić w każdej chwili.</p>
+<p>Jeżeli jesteśmy użytkownikami abonamentu, bądź mixa, problem mamy z głowy. W przypadku kart pre-paid&#8217;owych, możemy za darmo <span style="text-decoration: underline;">zarejestrować numer telefonu na nasze nazwisko</span>. <span style="color: #ff0000;">Robimy to ostrożnie</span>, bowiem właściciel numeru musi mieć zdolność abonamentową u operatora, do którego przejść. Tj. mieć stałe źródło dochodów lub okazać legitymację studencką. Jeżeli nie masz płynności finansowej, najlepiej zarejestrować numer na rodziców.</p>
+<p><strong>2. Aktualizacja danych osobowych u swojego operatora</strong></p>
+<p>Pierwszym krokiem, jaki powinien wykonać klient (Ty) to <span style="text-decoration: underline;">aktualizacja danych osobowych u operatora macierzystego</span> (który w tej chwili świadczy Ci usługi). Najczęstszą przyczyną nieaktualnych danych osobowych jest zmiana miejsca zamieszkania, aktualizacja dowodu osobistego, który wygasł, zgubiliśmy, zniszczył się, etc. W każdym z tych przypadków ulega co najmniej numer i seria dowodu osobistego, o czym <span style="color: #ff0000;">koniecznie trzeba poinformować swojego operatora przed podjęciem procedury migracji</span>. Jeżeli jesteś święcie przekonany, że nie nastąpiła zmiana danych w dowodzie &#8211; i tak pro forma idź je zaktualizować, nic Cię to nie kosztuje, a zaoszczędzisz stresu i utwierdzisz się w przekonaniu, że wszystko będzie ok.</p>
+<p>Proces aktualizacji danych trwa do 24 godzin. Zazwyczaj aktualizacja następuje od razu, ale inni operatorzy, którzy mają wgląd do globalnej bazy, zmiany zaobserwują za maksymalnie 24 godziny. Warto mieć na uwadze te opóźnienie, przed podjęciem kolejnego kroku.</p>
+<p><strong>3. Podpisanie umowy</strong></p>
+<p><span style="color: #ff0000;">Ważnym jest, żeby <strong>nie wypowiadać umowy operatorowi macierzystemu</strong></span>! Tracimy wówczas prawo do swojego numeru telefonu. <strong>Umowę &#8220;wypowiada&#8221; nowy operator</strong>, a raczej prosi o przepisanie numeru wraz z końcem świadczonych usług. <strong><span style="text-decoration: underline;">Idziesz zatem do nowego operatora!</span></strong> U nowego operatora otrzymasz dwa dokumenty: umowę abonamentową oraz pełnomocnictwo wobec wykonanie czynności prawnych dotyczących Twojego numeru telefonu, którego jesteś właścicielem. W skrócie: przenosisz wszystkie obowiązki na nowego operatora. To Cię nic nie kosztuje, a nawet możesz otrzymać bonus, o który warto negocjować.</p>
+<p>Kolejną istotną rzeczą jest to, że <span style="color: #ff0000;">dane wpisane na nowej umowie i pełnomocnictwie <strong>muszą zgadzać się</strong> z danymi u starego operatora</span>. W przeciwnym wypadku nowy użytkownik nie ma praw do przejęcia numeru, bo de facto nie jest w jego posiadaniu.</p>
+<p>Jeżeli umowę u starego operatora masz podpisaną na rodzica/opiekuna, niech ta sama osoba podpiszę umowę u nowego operatora. Analogicznie: w przypadku karty pre-paid, jeżeli nie masz płynności finansowej, bądź nie jesteś studentem, zarejestruj numer na osobę, która spełnia wymagania, a następnie idź z nią do nowego operatora.</p>
+<p>Po całym procesie można (nie trzeba) w każdej chwili wykonać cesję umowy &#8211; zmianę danych osobowych wobec której jest ona świadczona. Usługa ta jest bezpłatna, ale czasochłonna, na szczęście nas proszą tylko o zapłacenie pierwszej faktury (choć jedna musi być zapłacona &#8220;za kadencji&#8221; starego abonenta), a następnie o skan dowodu osobistego. Kolejna faktura przyjdzie już na nowego abonenta.</p>
+<p><strong>4. Uregulowanie faktur za ostatnie miesiące u starego operatora</strong></p>
+<p>Bez bałaganu, bo mogą nagle wyłączyć nam nowy abonament. Oczywista oczywistość.</p>
+<p>Mam nadzieję, że przybliżyłem temat osobom, które biorą pod uwagę zmianę operatora, bądź mieli niewystarczającą wiedzę na temat migracji. Leave feedback if u like it.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://athlan.pl/zmiana-operatora-bez-straty-numeru/#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://athlan.pl/zmiana-operatora-bez-straty-numeru/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+	</feed>
+<!-- WP Super Cache is installed but broken. The path to wp-cache-phase1.php in wp-content/advanced-cache.php must be fixed! -->

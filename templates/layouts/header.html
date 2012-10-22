@@ -1,0 +1,71 @@
+<script type="text/javascript">
+    function getWindowsSize(){
+        $("#sizeX").html('W: '+$(window).width());
+        $("#sizeY").html('H: '+$(window).height());
+    }
+    $(function(){
+        getWindowsSize();
+        $(window).resize(function(){
+            getWindowsSize()
+        });
+    })
+</script>
+
+<div style="display: none; position: fixed; height: 100px; width: 100px; padding: 10px; z-index: 10000;" class="bottom-right bg-color-darken fg-color-white">
+    Screen size:
+    <div id="sizeX">0</div>
+    <div id="sizeY">0</div>
+</div>
+
+<div class="bg-color-red fg-color-white text-center">
+    Witaj na nowej wersji planeta.php.pl 
+</div>
+
+<div class="navigation-bar">
+    <div class="navigation-bar-inner">
+        <span class="menu-pull"></span>
+
+        <div class="brand">
+            <a href="/"><span class="metro-ui-logo place-left"></span></a>
+            <a href="/"><span class="name">Planeta.php.pl <sup class="fg-color-yellow tertiary-info-secondary-text"> v 2.0 alfa
+        </div>
+
+        <ul> 
+            <li data-role="dropdown" class="sub-menu">
+                <a href="#">php.pl</a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://php.pl">Wortal</a></li>
+                    <li><a href="http://forum.php.pl">Forum</a></li>
+                    <li><a href="http://PHPEdia.pl">PHPEdia.pl</a></li>
+                    <li class="divider"></li>
+                </ul>
+            </li>
+            <li class="divider"></li>
+            <li><a href="/">Home</a></li>
+
+            <!--<li><a href="javascript.php">Javascript</a></li>-->
+            <li><a href="https://github.com/olton/Metro-UI-CSS">Get source</a></li>
+
+            <li data-role="dropdown" class="sub-menu">
+                <a href="#">Kategorie</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/k/popularne">Popularne</a></li>
+                    <li><a href="/k/latest">Ostatnio dodane</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/k/stats">Statystyki</a></li>
+                </ul>
+            </li>
+
+             <li data-role="dropdown" class="sub-menu">
+                <a href="#">RSS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/rss/atom">Atom</a></li>
+                    <li><a href="/rss/rss">RSS</a></li> 
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<script src="static/js/dropdown.js"></script>

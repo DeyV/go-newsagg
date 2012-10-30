@@ -7,21 +7,13 @@
 	</div>
 
 	<div class="page-region">
-		<div class="page-region-content">
-                          
-
-{{range .List}}   
- 
-	<h3 id="p{{.Id}}">{{.Title}}</h3>
-	<div class="page snapped" style="background-color: #ccc; height: 200px">  
-    	({{.Updated}})    	
-  	</div>	
-	<div class="page fill bg-color-blue" style="height: 200px">
-		{{.Summary}} 
-	</div>	
- 
+		<div class="page-region-content">                          
+{{range .List}}
+	<a id="p{{.Id}}" href="/k/id/{{.Id}}" style="font-size:{{.FontSize}}px"
+		title="Ostatnia aktualizacja w kategorii: {{.LastUpdate}}">{{.Name}} </a> 
+		<span  style="font-size:{{.FontSize}}px">({{.Count}})</span>
+	 
 {{end}}
-
     	</div>
 	</div>     
 </div>

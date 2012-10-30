@@ -1,5 +1,5 @@
 body {
-    background-color: #999;
+    background-color: #fff;
 }
 .page {
     width: 940px ;
@@ -24,6 +24,13 @@ body {
 .sprite-details li {
     line-height: 16px;
     margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px #ddd dotted;
+    color: #ddd;
+    background-color: #ddd;
 }
 
 @media (min-width: 768px) and (max-width: 979px) {

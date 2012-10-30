@@ -8,7 +8,8 @@ import (
 	// _ "github.com/mattn/go-sqlite3"
 	"github.com/coopernurse/gorp"
 
-	"./conf"
+	"github.com/gorilla/mux"
+	"mentax.it/planeta/conf"
 	"net/http"
 	// "runtime"
 	"time"
@@ -50,8 +51,11 @@ func main() {
 	runServer()
 }
 
+var r = mux.NewRouter()
+
 func runServer() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.Handle("/", r)
 
 	siteUrl, _ := config.GetString("default", "siteUrl")
 
@@ -66,7 +70,7 @@ func runServer() {
 // in the DefaultServeMux.
 // The documentation for ServeMux explains how patterns are matched.
 func HandleFunc(pattern string, handler func(http.ResponseWriter, *http.Request)) {
-	http.HandleFunc(pattern, func(w http.ResponseWriter, req *http.Request) {
+	r.HandleFunc(pattern, func(w http.ResponseWriter, req *http.Request) {
 		var t1 time.Time
 		if debugShowTime {
 			t1 = time.Now()

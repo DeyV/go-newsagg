@@ -6,8 +6,8 @@ import (
 )
 
 const (
-	MinFontSize = 7
-	MaxFontSize = 16
+	MinFontSize = 8
+	MaxFontSize = 18
 )
 
 var categories []*Category
@@ -22,6 +22,12 @@ func getExamplCat() []interface{} {
 		&Category{Id: 5, Name: "PostgreSQL", Count: 2, LastUpdate: "2012-09-09T13:42:23"},
 	}
 	return tab
+}
+
+func init() {
+	// tab := getAllCats(dbmap)
+	tab := getExamplCat()
+	initData(tab)
 }
 
 func InitDb(dbmap *gorp.DbMap) {

@@ -4,15 +4,17 @@ import (
 	"html/template"
 	// "io"
 	// "code.google.com/p/goconf/conf"
-	"./category"
 	"fmt"
+	// "github.com/gorilla/mux"
+	"mentax.it/planeta/category"
 	"net/http"
 )
 
 func init() {
 	HandleFunc("/", actionHome)
 	HandleFunc("/test", actionTest)
-	HandleFunc("/k", actionCategories)
+	// HandleFunc("/k", actionCategories)
+	HandleFunc("/k", actionCategoryList)
 	HandleFunc("/k/latest", actionCategories)
 }
 
@@ -35,7 +37,43 @@ func actionHome(w http.ResponseWriter, req *http.Request) {
 		fmt.Errorf("%v", err)
 	}
 
-	lay.New("title").Parse(config.GetStringDef("page", "title", "Page Title"))
+	lay.New("title").Parse("Najnowsze wpisy - " + config.GetStringDef("page", "title", ""))
+
+	err = lay.Execute(w, wr.getHtml())
+	if err != nil {
+		fmt.Errorf("%v", err)
+	}
+}
+
+func actionCategoryList(w http.ResponseWriter, req *http.Request) {
+
+	Id := req.URL.Query().Get("id")
+	fmt.Println(Id)
+
+	// // param := req.Vars()
+	// catId, ok := param["id"]
+	// if ok == nil {
+	// 	catId = 0
+	// }
+
+	var templActionHome *template.Template = template.Must(
+		template.ParseGlob("templates/home/*.html"))
+
+	lay := getLayoutTemplates()
+	wr := &HtmlContainer{}
+
+	// templActionHome.Funcs(template.FuncMap{"len": Len})
+	data := HtmlAssigner{
+		"List": getEntryList("", 10),
+		"Test": "Test",
+	}
+
+	err := templActionHome.Execute(wr, data)
+	if err != nil {
+		fmt.Errorf("%v", err)
+	}
+
+	lay.New("title").Parse("Najnowsze wpisy - " + config.GetStringDef("page", "title", ""))
 
 	err = lay.Execute(w, wr.getHtml())
 	if err != nil {
@@ -44,7 +82,6 @@ func actionHome(w http.ResponseWriter, req *http.Request) {
 }
 
 func actionCategories(w http.ResponseWriter, req *http.Request) {
-
 	var templActionCategories *template.Template = template.Must(
 		template.ParseGlob("templates/categories/*.html"))
 
@@ -62,7 +99,7 @@ func actionCategories(w http.ResponseWriter, req *http.Request) {
 	}
 
 	lay := getLayoutTemplates()
-	lay.New("title").Parse(config.GetStringDef("page", "title", "Page Categories"))
+	lay.New("title").Parse("Lista Kategorii - " + config.GetStringDef("page", "title", ""))
 
 	err = lay.Execute(w, wr.getHtml())
 	if err != nil {

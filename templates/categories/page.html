@@ -1,10 +1,12 @@
 
-<div class="page">
-	<div class="page-header">
-	    <div class="page-header-content">
-	   		<h2> Lista kategorii ({{len .List}})</h2>
-	    </div>
-	</div>
+ 
+ <div class="page-header">
+    <div class="page-header-content">
+        <h1> Lista kategorii <small>({{len .List}})</small></h1>
+        <a href="/" class="back-button big page-back"></a>
+    </div>
+  </div>
+ 
 
 	<div class="page-region">
 		<div class="page-region-content">                          
@@ -12,8 +14,7 @@
 	<a id="p{{.Id}}" href="/k/id/{{.Id}}" style="font-size:{{.FontSize}}px"
 		title="Ostatnia aktualizacja w kategorii: {{.LastUpdate}}">{{.Name}} </a> 
 		<span  style="font-size:{{.FontSize}}px">({{.Count}})</span>
-	 
 {{end}}
     	</div>
 	</div>     
-</div>
+ 

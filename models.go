@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./category"
-	"./rss"
 	"encoding/xml"
+	"github.com/DeyV/go-newsagg/category"
+	"github.com/DeyV/go-newsagg/rss"
 	"github.com/coopernurse/gorp"
 )
 

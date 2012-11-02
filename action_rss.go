@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./rss"
+	"github.com/DeyV/go-newsagg/rss"
 	//	"code.google.com/p/goconf/conf"
-	 
+
 	"net/http"
 )
 

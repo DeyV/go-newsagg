@@ -6,7 +6,7 @@ import (
 	// "code.google.com/p/goconf/conf"
 	"fmt"
 	// "github.com/gorilla/mux"
-	"mentax.it/planeta/category"
+	"github.com/DeyV/go-newsagg/category"
 	"net/http"
 )
 

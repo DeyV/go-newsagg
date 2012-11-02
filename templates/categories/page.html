@@ -11,7 +11,7 @@
 	<div class="page-region">
 		<div class="page-region-content">                          
 {{range .List}}
-	<a id="p{{.Id}}" href="/k/id/{{.Id}}" style="font-size:{{.FontSize}}px"
+	<a id="p{{.Id}}" href="/k?id={{.Id}}" style="font-size:{{.FontSize}}px"
 		title="Ostatnia aktualizacja w kategorii: {{.LastUpdate}}">{{.Name}} </a> 
 		<span  style="font-size:{{.FontSize}}px">({{.Count}})</span>
 {{end}}
